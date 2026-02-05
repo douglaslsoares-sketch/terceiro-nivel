@@ -88,9 +88,14 @@
 }
 
 .hero-primeira-dobra {
+  height: calc(100vh - 72px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
-  padding:90px 24px 100px 24px;
 }
+
 
 .hero-primeira-dobra p {
   font-family:"Barlow Condensed", sans-serif;
@@ -248,6 +253,14 @@ não tem tempo de entender como ele funciona.
   </footer>
 
 </main>
+
+  <script>
+  document.querySelector('.avancar').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#ancora').scrollIntoView({ behavior: 'smooth' });
+  });
+</script>
+
 
 </body>
 </html>
