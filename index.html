@@ -49,6 +49,7 @@
       font-weight: 600;
       color: #3A5A40;
       font-size: 1rem;
+      cursor: pointer;
     }
 
     a {
@@ -202,6 +203,25 @@
     <a href="inicio.html">Entrar no Terceiro Nível →</a>
   </div>
 </section>
+
+<script>
+  const dobras = document.querySelectorAll(".dobra");
+
+  dobras.forEach((dobra, index) => {
+    const btn = dobra.querySelector(".avancar");
+
+    if (!btn) return;
+
+    // último bloco não faz scroll
+    if (index === dobras.length - 1) return;
+
+    btn.addEventListener("click", () => {
+      dobras[index + 1].scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
