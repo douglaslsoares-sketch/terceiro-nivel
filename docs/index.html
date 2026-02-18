@@ -11,11 +11,7 @@
   --fundo:#F2F2F2;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -23,8 +19,6 @@ body{
   color:#000;
   line-height:1.5;
 }
-
-/* ===== TOPO ===== */
 
 .topo{
   position:relative;
@@ -45,7 +39,7 @@ body{
   height:45px;
 }
 
-/* ===== ÂNCORA PRINCIPAL ===== */
+/* ÂNCORA */
 
 .ancora{
   background:#fff;
@@ -53,7 +47,9 @@ body{
   border-top:4px solid #000;
   border-bottom:4px solid #000;
   margin:20px 15px;
-  cursor:pointer;
+  text-decoration:none;
+  color:#000;
+  display:block;
 }
 
 .ancora h1{
@@ -66,27 +62,7 @@ body{
   font-size:18px;
 }
 
-/* ===== CONTEÚDO EXPANDIDO ===== */
-
-.conteudo{
-  display:none;
-  background:#fff;
-  margin:0 15px 25px 15px;
-  padding:25px 20px;
-  border-bottom:3px solid #000;
-}
-
-.conteudo h3{
-  margin-top:15px;
-  font-size:18px;
-  font-weight:700;
-}
-
-.conteudo p{
-  margin-top:6px;
-}
-
-/* ===== GRID ===== */
+/* GRID */
 
 .grid{
   padding:0 15px 30px 15px;
@@ -101,8 +77,6 @@ body{
   padding:18px;
   font-size:16px;
 }
-
-/* ===== DESKTOP ===== */
 
 @media(min-width:768px){
   .grid{
@@ -119,45 +93,20 @@ body{
   <img src="simbolo-verde.png" alt="Símbolo">
 </div>
 
-<div class="ancora" onclick="toggleConteudo()">
+<a href="tres-niveis.html" class="ancora">
   <h1>TERCEIRO NÍVEL</h1>
   <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
-</div>
-
-<div id="conteudo" class="conteudo">
-
-  <h3>Primeiro nível</h3>
-  <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
-
-  <h3>Segundo nível</h3>
-  <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
-
-  <h3>Terceiro nível</h3>
-  <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
-
-</div>
+</a>
 
 <div class="grid">
-
   <div class="card">Você faz tudo funcionar.</div>
   <div class="card">Esquerda e direita.</div>
-
   <div class="card">Três níveis.</div>
   <div class="card">Mercado.</div>
-
   <div class="card">Governo.</div>
   <div class="card">Informação também é estrutura.</div>
-
   <div class="card">O caminho do dinheiro.</div>
-
 </div>
-
-<script>
-function toggleConteudo(){
-  const bloco = document.getElementById("conteudo");
-  bloco.style.display = bloco.style.display === "block" ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
