@@ -35,10 +35,6 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:14px 24px;
-  position:fixed;
-  width:100%;
-  top:0;
-  left:0;
 }
 
 .header img{
@@ -55,53 +51,70 @@ body{
 /* ===== MAIN ===== */
 
 .main{
-  padding-top:140px;
-  max-width:900px;
-  margin:0 auto;
-  padding-left:20px;
-  padding-right:20px;
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
 }
 
-/* ===== CARD PRINCIPAL ===== */
+/* ===== CARD LARGURA TOTAL ===== */
 
-.card-principal{
-  text-align:center;
+.card-full{
+  background:white;
+  padding:30px;
+  border-radius:12px;
   cursor:pointer;
-  padding:90px 20px;
-  border-top:2px solid var(--texto);
-  border-bottom:2px solid var(--texto);
-  transition:all 0.2s ease;
+  font-weight:600;
+  font-size:20px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom:20px;
+  transition:0.2s;
 }
 
-.card-principal:hover{
-  background:#eeeeee;
+.card-full:hover{
+  transform:translateY(-2px);
 }
 
-.card-principal h1{
-  font-size:44px;
-  letter-spacing:2px;
-  font-weight:800;
-}
-
-/* ===== CONTEÚDO ===== */
-
-.conteudo{
+.conteudo-expandido{
   display:none;
-  margin-top:60px;
-  font-size:18px;
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom:40px;
 }
 
-.conteudo h2{
-  margin-top:40px;
-  font-size:22px;
+.conteudo-expandido h3{
+  margin-top:20px;
 }
 
-.conteudo p{
-  margin-top:10px;
+.conteudo-expandido p{
+  margin-top:8px;
   color:var(--cinza);
+}
+
+/* ===== GRID 2 COLUNAS ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-2px);
 }
 </style>
 </head>
+
 <body>
 
 <header class="header">
@@ -111,29 +124,44 @@ body{
 
 <main class="main">
 
-  <div class="card-principal" onclick="abrirConteudo()">
-    <h1>COMO O PAÍS FUNCIONA</h1>
+  <!-- CARD PRINCIPAL LARGURA TOTAL -->
+  <div class="card-full" onclick="toggleTresNiveis()">
+    COMO O PAÍS FUNCIONA
   </div>
 
-  <div id="conteudo" class="conteudo">
-
-    <h2>Primeiro nível</h2>
+  <div id="tresNiveis" class="conteudo-expandido">
+    <h3>Primeiro nível</h3>
     <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
 
-    <h2>Segundo nível</h2>
+    <h3>Segundo nível</h3>
     <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
 
-    <h2>Terceiro nível</h2>
+    <h3>Terceiro nível</h3>
     <p>Trabalho e consumo. Onde está a maioria das pessoas.  
     Quem sustenta tudo isso.</p>
+  </div>
+
+  <!-- GRADE 2 COLUNAS (SEUS CARDS) -->
+  <div class="grid">
+
+    <div class="card">Você faz tudo funcionar.</div>
+    <div class="card">Esquerda e direita.</div>
+
+    <div class="card">Três níveis.</div>
+    <div class="card">Mercado.</div>
+
+    <div class="card">Governo.</div>
+    <div class="card">Informação também é estrutura.</div>
+
+    <div class="card">O caminho do dinheiro.</div>
 
   </div>
 
 </main>
 
 <script>
-function abrirConteudo(){
-  const bloco = document.getElementById("conteudo");
+function toggleTresNiveis(){
+  const bloco = document.getElementById("tresNiveis");
   bloco.style.display = bloco.style.display === "block" ? "none" : "block";
 }
 </script>
