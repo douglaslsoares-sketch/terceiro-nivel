@@ -1,1 +1,165 @@
+:root{
+  --verde:#3A5A40;
+  --fundo:#F8F8F8;
+  --texto:#222;
+  --cinza:#666;
+}
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
+}
+
+/* ===== NAV ===== */
+
+.top-nav{
+  display:flex;
+  justify-content:flex-end;
+  gap:25px;
+  padding:20px 40px 0 40px;
+}
+
+.top-nav a{
+  text-decoration:none;
+  font-size:14px;
+  color:var(--cinza);
+}
+
+.top-nav a:hover{
+  color:var(--verde);
+}
+
+/* ===== HEADER ===== */
+
+.site-header{
+  text-align:center;
+  padding:70px 20px 50px;
+}
+
+.logo img{
+  width:88px;        /* proporção institucional */
+  height:auto;
+  display:block;
+  margin:0 auto 20px;
+}
+
+.site-title,
+.page-title{
+  font-size:24px;
+  font-weight:500;
+  margin-bottom:10px;
+}
+
+.intro{
+  font-size:15px;
+  color:var(--cinza);
+}
+
+/* ===== PORTAL GRID ===== */
+
+.portal{
+  max-width:1000px;
+  margin:0 auto;
+  padding:40px 20px 120px;
+}
+
+.portal-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.portal-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:140px;
+  background:#fff;
+  border:1px solid #e5e5e5;
+  text-decoration:none;
+  color:var(--texto);
+  font-weight:500;
+  transition:.25s ease;
+}
+
+.portal-item:hover{
+  border-color:var(--verde);
+  transform:translateY(-3px);
+}
+
+/* ===== CONTEÚDO EDITORIAL ===== */
+
+.content{
+  max-width:760px;
+  margin:0 auto;
+  padding:40px 20px 120px;
+}
+
+.idea{
+  margin-bottom:70px;
+}
+
+.idea h2{
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+.idea p{
+  color:var(--cinza);
+  margin-bottom:10px;
+}
+
+.idea a{
+  text-decoration:none;
+  color:var(--verde);
+  font-size:14px;
+}
+
+.idea a:hover{
+  text-decoration:underline;
+}
+
+/* ===== FORMULÁRIO ===== */
+
+form input,
+form textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+}
+
+form button{
+  padding:10px 20px;
+  background:var(--verde);
+  color:#fff;
+  border:none;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer{
+  border-top:1px solid #e5e5e5;
+  padding:25px;
+  text-align:center;
+  font-size:14px;
+  color:var(--cinza);
+}
+
+.site-footer a{
+  text-decoration:none;
+  color:var(--cinza);
+  margin:0 15px;
+}
+
+.site-footer a:hover{
+  color:var(--verde);
+}
