@@ -18,6 +18,14 @@ body{
   line-height:1.6;
 }
 
+/* ===== REGRA GLOBAL DE IMAGENS (IMPORTANTE) ===== */
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
 /* ============================= */
 /* ===== TOPO / MARCA ===== */
 /* ============================= */
@@ -44,6 +52,7 @@ body{
 
 .marca img{
   height:46px;
+  width:auto;
   margin-right:8px;
 }
 
@@ -117,8 +126,6 @@ body{
 .portal-item:hover{
   background:#f0f0f0;
 }
-
-/* desktop */
 
 @media(min-width:768px){
   .portal-grid{
