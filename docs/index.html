@@ -8,9 +8,8 @@
 <style>
 :root{
   --verde:#3A5A40;
-  --fundo:#F8F8F8;
+  --fundo:#F2F2F2;
   --texto:#111;
-  --cinza:#666;
 }
 
 *{
@@ -20,114 +19,109 @@
 }
 
 body{
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background:var(--fundo);
   color:var(--texto);
-  line-height:1.6;
+  line-height:1.5;
 }
 
-/* ===== TOPO LIMPO ===== */
+/* ===== TOPO ===== */
 
 .topo{
   position:relative;
-  padding:40px 20px 20px 20px;
+  padding:20px 15px;
   text-align:center;
-}
-
-.topo img{
-  height:60px;
 }
 
 .topo a{
   position:absolute;
   top:20px;
-  right:20px;
+  right:15px;
+  font-size:13px;
   text-decoration:none;
-  font-size:14px;
-  color:var(--texto);
-  letter-spacing:1px;
+  color:#111;
 }
 
-/* ===== MAIN ===== */
+.topo img{
+  height:45px;
+}
+
+/* ===== CONTAINER ===== */
 
 .main{
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
+  padding:20px 15px 40px 15px;
 }
 
 /* ===== CARD PRINCIPAL ===== */
 
-.card-full{
-  background:white;
-  padding:40px;
-  border-radius:16px;
+.card-principal{
+  background:#fff;
+  border:1px solid #000;
+  padding:25px 20px;
+  border-radius:4px;
+  margin-bottom:25px;
   cursor:pointer;
-  box-shadow:0 3px 10px rgba(0,0,0,0.05);
-  margin-bottom:20px;
-  transition:0.2s;
 }
 
-.card-full:hover{
-  transform:translateY(-3px);
-}
-
-.card-full h1{
+.card-principal h1{
   font-size:28px;
-  margin-bottom:15px;
+  margin-bottom:12px;
+  font-weight:800;
 }
 
-.card-full p{
-  font-size:18px;
-  color:var(--cinza);
+.card-principal p{
+  font-size:17px;
 }
 
 /* ===== CONTEÚDO EXPANDIDO ===== */
 
-.conteudo-expandido{
+.conteudo{
   display:none;
-  background:white;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 3px 10px rgba(0,0,0,0.05);
-  margin-bottom:40px;
+  background:#fff;
+  border:1px solid #000;
+  padding:20px;
+  border-radius:4px;
+  margin-bottom:30px;
 }
 
-.conteudo-expandido h3{
-  margin-top:20px;
+.conteudo h3{
+  margin-top:15px;
+  font-size:18px;
 }
 
-.conteudo-expandido p{
-  margin-top:8px;
-  color:var(--cinza);
+.conteudo p{
+  margin-top:6px;
 }
 
-/* ===== GRID 2 COLUNAS ===== */
+/* ===== GRID ===== */
 
 .grid{
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+  grid-template-columns:1fr;
+  gap:15px;
 }
 
 .card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
+  background:#fff;
+  border:1px solid #000;
+  padding:18px;
+  border-radius:4px;
+  font-size:16px;
   cursor:pointer;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
-  transition:0.2s;
 }
 
-.card:hover{
-  transform:translateY(-2px);
+/* ===== DESKTOP ===== */
+
+@media(min-width:768px){
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- TOPO LIMPO -->
 <div class="topo">
   <a href="#">IDEIAS EM CIRCULAÇÃO →</a>
   <img src="simbolo-verde.png" alt="Símbolo">
@@ -135,14 +129,14 @@ body{
 
 <main class="main">
 
-  <!-- CARD PRINCIPAL COM ENUNCIADO -->
-  <div class="card-full" onclick="toggleTresNiveis()">
+  <!-- CARD PRINCIPAL -->
+  <div class="card-principal" onclick="toggleConteudo()">
     <h1>TERCEIRO NÍVEL</h1>
     <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
   </div>
 
-  <!-- CONTEÚDO EXPANDIDO -->
-  <div id="tresNiveis" class="conteudo-expandido">
+  <!-- CONTEÚDO -->
+  <div id="conteudo" class="conteudo">
 
     <h3>Primeiro nível</h3>
     <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
@@ -151,12 +145,11 @@ body{
     <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
 
     <h3>Terceiro nível</h3>
-    <p>Trabalho e consumo. Onde está a maioria das pessoas.  
-    Quem sustenta tudo isso.</p>
+    <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
 
   </div>
 
-  <!-- GRADE NORMAL -->
+  <!-- GRID -->
   <div class="grid">
 
     <div class="card">Você faz tudo funcionar.</div>
@@ -175,8 +168,8 @@ body{
 </main>
 
 <script>
-function toggleTresNiveis(){
-  const bloco = document.getElementById("tresNiveis");
+function toggleConteudo(){
+  const bloco = document.getElementById("conteudo");
   bloco.style.display = bloco.style.display === "block" ? "none" : "block";
 }
 </script>
