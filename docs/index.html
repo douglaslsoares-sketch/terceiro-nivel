@@ -9,7 +9,6 @@
 :root{
   --verde:#3A5A40;
   --fundo:#F2F2F2;
-  --texto:#111;
 }
 
 *{
@@ -21,7 +20,7 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
   background:var(--fundo);
-  color:var(--texto);
+  color:#000;
   line-height:1.5;
 }
 
@@ -39,38 +38,32 @@ body{
   right:15px;
   font-size:13px;
   text-decoration:none;
-  color:#111;
+  color:#000;
 }
 
 .topo img{
   height:45px;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== ÂNCORA PRINCIPAL ===== */
 
-.main{
-  padding:20px 15px 40px 15px;
-}
-
-/* ===== CARD PRINCIPAL ===== */
-
-.card-principal{
+.ancora{
   background:#fff;
-  border:1px solid #000;
-  padding:25px 20px;
-  border-radius:4px;
-  margin-bottom:25px;
+  padding:35px 20px;
+  border-top:4px solid #000;
+  border-bottom:4px solid #000;
+  margin:20px 15px;
   cursor:pointer;
 }
 
-.card-principal h1{
-  font-size:28px;
+.ancora h1{
+  font-size:32px;
+  font-weight:900;
   margin-bottom:12px;
-  font-weight:800;
 }
 
-.card-principal p{
-  font-size:17px;
+.ancora p{
+  font-size:18px;
 }
 
 /* ===== CONTEÚDO EXPANDIDO ===== */
@@ -78,15 +71,15 @@ body{
 .conteudo{
   display:none;
   background:#fff;
-  border:1px solid #000;
-  padding:20px;
-  border-radius:4px;
-  margin-bottom:30px;
+  margin:0 15px 25px 15px;
+  padding:25px 20px;
+  border-bottom:3px solid #000;
 }
 
 .conteudo h3{
   margin-top:15px;
   font-size:18px;
+  font-weight:700;
 }
 
 .conteudo p{
@@ -96,6 +89,7 @@ body{
 /* ===== GRID ===== */
 
 .grid{
+  padding:0 15px 30px 15px;
   display:grid;
   grid-template-columns:1fr;
   gap:15px;
@@ -105,9 +99,7 @@ body{
   background:#fff;
   border:1px solid #000;
   padding:18px;
-  border-radius:4px;
   font-size:16px;
-  cursor:pointer;
 }
 
 /* ===== DESKTOP ===== */
@@ -127,45 +119,38 @@ body{
   <img src="simbolo-verde.png" alt="Símbolo">
 </div>
 
-<main class="main">
+<div class="ancora" onclick="toggleConteudo()">
+  <h1>TERCEIRO NÍVEL</h1>
+  <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
+</div>
 
-  <!-- CARD PRINCIPAL -->
-  <div class="card-principal" onclick="toggleConteudo()">
-    <h1>TERCEIRO NÍVEL</h1>
-    <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
-  </div>
+<div id="conteudo" class="conteudo">
 
-  <!-- CONTEÚDO -->
-  <div id="conteudo" class="conteudo">
+  <h3>Primeiro nível</h3>
+  <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
 
-    <h3>Primeiro nível</h3>
-    <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
+  <h3>Segundo nível</h3>
+  <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
 
-    <h3>Segundo nível</h3>
-    <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
+  <h3>Terceiro nível</h3>
+  <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
 
-    <h3>Terceiro nível</h3>
-    <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
+</div>
 
-  </div>
+<div class="grid">
 
-  <!-- GRID -->
-  <div class="grid">
+  <div class="card">Você faz tudo funcionar.</div>
+  <div class="card">Esquerda e direita.</div>
 
-    <div class="card">Você faz tudo funcionar.</div>
-    <div class="card">Esquerda e direita.</div>
+  <div class="card">Três níveis.</div>
+  <div class="card">Mercado.</div>
 
-    <div class="card">Três níveis.</div>
-    <div class="card">Mercado.</div>
+  <div class="card">Governo.</div>
+  <div class="card">Informação também é estrutura.</div>
 
-    <div class="card">Governo.</div>
-    <div class="card">Informação também é estrutura.</div>
+  <div class="card">O caminho do dinheiro.</div>
 
-    <div class="card">O caminho do dinheiro.</div>
-
-  </div>
-
-</main>
+</div>
 
 <script>
 function toggleConteudo(){
