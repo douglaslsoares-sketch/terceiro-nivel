@@ -55,7 +55,7 @@ body{
 /* ===== MAIN ===== */
 
 .main{
-  padding-top:120px;
+  padding-top:140px;
   max-width:900px;
   margin:0 auto;
   padding-left:20px;
@@ -64,16 +64,21 @@ body{
 
 /* ===== CARD PRINCIPAL ===== */
 
-.card{
+.card-principal{
   text-align:center;
   cursor:pointer;
-  padding:80px 20px;
+  padding:90px 20px;
   border-top:2px solid var(--texto);
   border-bottom:2px solid var(--texto);
+  transition:all 0.2s ease;
 }
 
-.card h1{
-  font-size:42px;
+.card-principal:hover{
+  background:#eeeeee;
+}
+
+.card-principal h1{
+  font-size:44px;
   letter-spacing:2px;
   font-weight:800;
 }
@@ -100,13 +105,13 @@ body{
 <body>
 
 <header class="header">
-  <img src="simbolo-branco.png" alt="Símbolo Terceiro Nível">
-  <a href="#">Ideias em circulação</a>
+  <img src="simbolo-branco.png" alt="Símbolo">
+  <a href="#">IDEIAS EM CIRCULAÇÃO →</a>
 </header>
 
 <main class="main">
 
-  <div class="card" onclick="abrirConteudo()">
+  <div class="card-principal" onclick="abrirConteudo()">
     <h1>COMO O PAÍS FUNCIONA</h1>
   </div>
 
@@ -129,11 +134,7 @@ body{
 <script>
 function abrirConteudo(){
   const bloco = document.getElementById("conteudo");
-  if(bloco.style.display === "block"){
-    bloco.style.display = "none";
-  } else {
-    bloco.style.display = "block";
-  }
+  bloco.style.display = bloco.style.display === "block" ? "none" : "block";
 }
 </script>
 
