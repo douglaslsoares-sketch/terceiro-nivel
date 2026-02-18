@@ -51,13 +51,11 @@ img{
 }
 
 /* 🔥 CORREÇÃO DEFINITIVA DO LOGO */
-.marca img{
-  width:46px;
-  height:46px;
-  object-fit:contain;
-  flex-shrink:0;
-  margin-right:8px;
+.marca img {
+  height: 46px;
+  width: auto;
 }
+
 
 .marca span{
   font-weight:800;
