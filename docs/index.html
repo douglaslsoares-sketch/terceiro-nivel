@@ -56,30 +56,40 @@ body{
   padding:0 20px;
 }
 
-/* ===== CARD LARGURA TOTAL ===== */
+/* ===== CARD PRINCIPAL ===== */
 
 .card-full{
   background:white;
-  padding:30px;
-  border-radius:12px;
+  padding:40px;
+  border-radius:16px;
   cursor:pointer;
-  font-weight:600;
-  font-size:20px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
   margin-bottom:20px;
   transition:0.2s;
 }
 
 .card-full:hover{
-  transform:translateY(-2px);
+  transform:translateY(-3px);
 }
+
+.card-full h1{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.card-full p{
+  font-size:18px;
+  color:var(--cinza);
+}
+
+/* ===== CONTEÚDO EXPANDIDO ===== */
 
 .conteudo-expandido{
   display:none;
   background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.05);
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.05);
   margin-bottom:40px;
 }
 
@@ -124,12 +134,15 @@ body{
 
 <main class="main">
 
-  <!-- CARD PRINCIPAL LARGURA TOTAL -->
+  <!-- CARD PRINCIPAL COM ENUNCIADO -->
   <div class="card-full" onclick="toggleTresNiveis()">
-    COMO O PAÍS FUNCIONA
+    <h1>TERCEIRO NÍVEL</h1>
+    <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
   </div>
 
+  <!-- CONTEÚDO EXPANDIDO -->
   <div id="tresNiveis" class="conteudo-expandido">
+
     <h3>Primeiro nível</h3>
     <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
 
@@ -139,9 +152,10 @@ body{
     <h3>Terceiro nível</h3>
     <p>Trabalho e consumo. Onde está a maioria das pessoas.  
     Quem sustenta tudo isso.</p>
+
   </div>
 
-  <!-- GRADE 2 COLUNAS (SEUS CARDS) -->
+  <!-- GRADE NORMAL -->
   <div class="grid">
 
     <div class="card">Você faz tudo funcionar.</div>
