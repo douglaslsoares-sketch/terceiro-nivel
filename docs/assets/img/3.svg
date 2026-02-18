@@ -1,13 +1,25 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <text 
-    x="50%" 
-    y="55%" 
-    text-anchor="middle" 
-    dominant-baseline="middle"
-    font-family="Arial, Helvetica, sans-serif"
-    font-weight="900"
-    font-size="90"
-    fill="#3A5A40">
-    3
-  </text>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 200 200"
+     preserveAspectRatio="xMidYMid meet">
+
+  <path fill="#3A5A40"
+        d="M100 10
+           C145 10 175 40 175 80
+           C175 110 155 130 130 140
+           C155 150 175 170 175 190
+           C175 230 140 260 100 260
+           C60 260 30 235 25 200
+           L60 195
+           C65 220 80 235 100 235
+           C125 235 145 215 145 190
+           C145 165 125 150 100 150
+           L85 150
+           L85 120
+           L100 120
+           C125 120 145 105 145 80
+           C145 55 125 40 100 40
+           C80 40 65 50 60 70
+           L25 65
+           C30 35 60 10 100 10
+           Z"/>
 </svg>
