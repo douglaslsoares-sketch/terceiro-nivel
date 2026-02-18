@@ -1,154 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terceiro Nível</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terceiro Nível</title>
 
-  <style>
-    :root {
-      --verde-profundo: #3A5A40;
-      --branco-papel: #F8F8F8;
-      --amarelo-moeda: #EACD36;
-      --vermelho-destaque: #D32F2F;
-      --texto-escuro: #1C1C1C;
-    }
+<style>
+:root{
+  --verde:#3A5A40;
+  --fundo:#F8F8F8;
+  --texto:#111;
+  --cinza:#666;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--branco-papel);
-      color: var(--texto-escuro);
-      line-height: 1.4;
-    }
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
+}
 
-    /* ===== FAIXA SUPERIOR ===== */
+/* ===== HEADER ===== */
 
-    .topo {
-      background: var(--verde-profundo);
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 18px;
-    }
+.header{
+  background:var(--verde);
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 24px;
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.header img{
+  height:32px;
+}
 
-    .logo img {
-      width: 36px;
-      height: 36px;
-    }
+.header a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  letter-spacing:1px;
+}
 
-    .circulacao a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-    }
+/* ===== MAIN ===== */
 
-    .circulacao a:hover {
-      opacity: 0.85;
-    }
+.main{
+  padding-top:120px;
+  max-width:900px;
+  margin:0 auto;
+  padding-left:20px;
+  padding-right:20px;
+}
 
-    /* ===== IDENTIDADE ===== */
+/* ===== CARD PRINCIPAL ===== */
 
-    .identidade {
-      padding: 40px 20px 20px;
-      text-align: left;
-    }
+.card{
+  text-align:center;
+  cursor:pointer;
+  padding:80px 20px;
+  border-top:2px solid var(--texto);
+  border-bottom:2px solid var(--texto);
+}
 
-    .identidade h1 {
-      font-size: 32px;
-      margin-bottom: 18px;
-      font-weight: 800;
-    }
+.card h1{
+  font-size:42px;
+  letter-spacing:2px;
+  font-weight:800;
+}
 
-    .identidade p {
-      font-size: 18px;
-      max-width: 600px;
-    }
+/* ===== CONTEÚDO ===== */
 
-    /* ===== GRADE DE CARDS ===== */
+.conteudo{
+  display:none;
+  margin-top:60px;
+  font-size:18px;
+}
 
-    .cards {
-      padding: 30px 20px 50px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
+.conteudo h2{
+  margin-top:40px;
+  font-size:22px;
+}
 
-    .card {
-      background: white;
-      padding: 18px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    @media (max-width: 600px) {
-      .cards {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-  </style>
+.conteudo p{
+  margin-top:10px;
+  color:var(--cinza);
+}
+</style>
 </head>
-
 <body>
 
-  <!-- ===== FAIXA SUPERIOR ===== -->
+<header class="header">
+  <img src="simbolo-branco.png" alt="Símbolo Terceiro Nível">
+  <a href="#">Ideias em circulação</a>
+</header>
 
-  <div class="topo">
-    <div class="logo">
-      <!-- Substituir pelo seu símbolo -->
-      <img src="simbolo.png" alt="Símbolo Terceiro Nível">
-    </div>
+<main class="main">
 
-    <div class="circulacao">
-      <a href="ideias.html">IDEIAS EM CIRCULAÇÃO →</a>
-    </div>
+  <div class="card" onclick="abrirConteudo()">
+    <h1>COMO O PAÍS FUNCIONA</h1>
   </div>
 
-  <!-- ===== IDENTIDADE ===== -->
+  <div id="conteudo" class="conteudo">
 
-  <section class="identidade">
-    <h1>TERCEIRO NÍVEL</h1>
-    <p>Quem faz o país funcionar, precisa entender como o país funciona.</p>
-  </section>
+    <h2>Primeiro nível</h2>
+    <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
 
-  <!-- ===== GRADE DE CARDS ===== -->
+    <h2>Segundo nível</h2>
+    <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
 
-  <section class="cards">
+    <h2>Terceiro nível</h2>
+    <p>Trabalho e consumo. Onde está a maioria das pessoas.  
+    Quem sustenta tudo isso.</p>
 
-    <div class="card">Você faz tudo funcionar.</div>
-    <div class="card">Esquerda e direita.</div>
+  </div>
 
-    <div class="card">Três níveis.</div>
-    <div class="card">Mercado.</div>
+</main>
 
-    <div class="card">Governo.</div>
-    <div class="card">Informação também é estrutura.</div>
-
-    <div class="card">O caminho do dinheiro.</div>
-
-  </section>
+<script>
+function abrirConteudo(){
+  const bloco = document.getElementById("conteudo");
+  if(bloco.style.display === "block"){
+    bloco.style.display = "none";
+  } else {
+    bloco.style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>
