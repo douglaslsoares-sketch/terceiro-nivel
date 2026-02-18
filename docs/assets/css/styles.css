@@ -18,10 +18,12 @@ body{
   line-height:1.6;
 }
 
-/* ===== REGRA GLOBAL DE IMAGENS (IMPORTANTE) ===== */
+/* ===== REGRA GLOBAL DE IMAGENS ===== */
 
 img{
-   display:block;
+  max-width:100%;
+  height:auto;
+  display:block;
 }
 
 /* ============================= */
@@ -48,9 +50,12 @@ img{
   color:var(--texto);
 }
 
+/* 🔥 CORREÇÃO DEFINITIVA DO LOGO */
 .marca img{
+  width:46px;
   height:46px;
-  width:auto;
+  object-fit:contain;
+  flex-shrink:0;
   margin-right:8px;
 }
 
