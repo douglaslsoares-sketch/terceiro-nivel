@@ -8,8 +8,6 @@
 <style>
 :root{
   --verde:#3A5A40;
-  --fundo:#F2F2F2;
-  --texto:#111;
 }
 
 *{
@@ -20,101 +18,89 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background:var(--fundo);
-  color:var(--texto);
-  line-height:1.5;
+  background:#ffffff;
+  color:#000;
+  line-height:1.4;
 }
 
 /* ===== TOPO ===== */
 
 .topo{
   position:relative;
-  padding:20px 15px;
+  padding:15px;
   text-align:center;
 }
 
 .topo a{
   position:absolute;
-  top:20px;
+  top:15px;
   right:15px;
-  font-size:13px;
+  font-size:12px;
   text-decoration:none;
-  color:#111;
+  color:#000;
 }
 
 .topo img{
-  height:45px;
+  height:40px;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== BLOCO PRINCIPAL ===== */
 
-.main{
-  padding:20px 15px 40px 15px;
-}
-
-/* ===== CARD PRINCIPAL ===== */
-
-.card-principal{
-  background:#fff;
-  border:1px solid #000;
-  padding:25px 20px;
-  border-radius:4px;
-  margin-bottom:25px;
+.principal{
+  padding:25px 15px;
+  border-top:4px solid #000;
+  border-bottom:4px solid #000;
   cursor:pointer;
 }
 
-.card-principal h1{
-  font-size:28px;
-  margin-bottom:12px;
-  font-weight:800;
+.principal h1{
+  font-size:32px;
+  font-weight:900;
+  margin-bottom:10px;
 }
 
-.card-principal p{
-  font-size:17px;
+.principal p{
+  font-size:18px;
 }
 
-/* ===== CONTEÚDO EXPANDIDO ===== */
+/* ===== CONTEÚDO ===== */
 
 .conteudo{
   display:none;
-  background:#fff;
-  border:1px solid #000;
-  padding:20px;
-  border-radius:4px;
-  margin-bottom:30px;
+  padding:20px 15px;
+  border-bottom:4px solid #000;
 }
 
 .conteudo h3{
   margin-top:15px;
   font-size:18px;
+  font-weight:700;
 }
 
 .conteudo p{
-  margin-top:6px;
+  margin-top:5px;
+  font-size:16px;
 }
 
-/* ===== GRID ===== */
-
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:15px;
-}
+/* ===== CARDS ===== */
 
 .card{
-  background:#fff;
-  border:1px solid #000;
-  padding:18px;
-  border-radius:4px;
-  font-size:16px;
-  cursor:pointer;
+  padding:18px 15px;
+  border-bottom:2px solid #000;
+  font-size:17px;
 }
 
 /* ===== DESKTOP ===== */
 
 @media(min-width:768px){
   .grid{
+    display:grid;
     grid-template-columns:1fr 1fr;
+  }
+
+  .card{
+    border:2px solid #000;
+    border-bottom:2px solid #000;
   }
 }
 </style>
@@ -127,45 +113,38 @@ body{
   <img src="simbolo-verde.png" alt="Símbolo">
 </div>
 
-<main class="main">
+<div class="principal" onclick="toggleConteudo()">
+  <h1>TERCEIRO NÍVEL</h1>
+  <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
+</div>
 
-  <!-- CARD PRINCIPAL -->
-  <div class="card-principal" onclick="toggleConteudo()">
-    <h1>TERCEIRO NÍVEL</h1>
-    <p>Quem faz o país funcionar precisa entender como o país funciona.</p>
-  </div>
+<div id="conteudo" class="conteudo">
 
-  <!-- CONTEÚDO -->
-  <div id="conteudo" class="conteudo">
+  <h3>Primeiro nível</h3>
+  <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
 
-    <h3>Primeiro nível</h3>
-    <p>Mercado. Onde decisões econômicas são tomadas hoje.</p>
+  <h3>Segundo nível</h3>
+  <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
 
-    <h3>Segundo nível</h3>
-    <p>Governo. Onde decisões viram leis, políticas e orçamento.</p>
+  <h3>Terceiro nível</h3>
+  <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
 
-    <h3>Terceiro nível</h3>
-    <p>Trabalho e consumo. Onde está a maioria das pessoas. Quem sustenta tudo isso.</p>
+</div>
 
-  </div>
+<div class="grid">
 
-  <!-- GRID -->
-  <div class="grid">
+  <div class="card">Você faz tudo funcionar.</div>
+  <div class="card">Esquerda e direita.</div>
 
-    <div class="card">Você faz tudo funcionar.</div>
-    <div class="card">Esquerda e direita.</div>
+  <div class="card">Três níveis.</div>
+  <div class="card">Mercado.</div>
 
-    <div class="card">Três níveis.</div>
-    <div class="card">Mercado.</div>
+  <div class="card">Governo.</div>
+  <div class="card">Informação também é estrutura.</div>
 
-    <div class="card">Governo.</div>
-    <div class="card">Informação também é estrutura.</div>
+  <div class="card">O caminho do dinheiro.</div>
 
-    <div class="card">O caminho do dinheiro.</div>
-
-  </div>
-
-</main>
+</div>
 
 <script>
 function toggleConteudo(){
