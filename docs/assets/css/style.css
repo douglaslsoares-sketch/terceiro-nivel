@@ -248,3 +248,12 @@ form button:hover{
 .site-footer a:hover{
   color:var(--verde);
 }
+
+.subtitulo-topo{
+  text-align:center;
+  margin-top:8px;
+  margin-bottom:30px;
+  font-size:16px;
+  font-weight:500;
+  color:var(--cinza);
+}
