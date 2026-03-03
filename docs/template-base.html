@@ -34,6 +34,42 @@
   margin-bottom:20px;
   color:#333;
 }
+
+  .navegacao-capitulos{
+  max-width:760px;
+  margin:60px auto 80px;
+  padding:0 20px;
+}
+
+.nav-linha{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.nav-linha a{
+  text-decoration:none;
+  color:#3A5A40;
+}
+
+.nav-linha a:hover{
+  text-decoration:underline;
+}
+
+.nav-percurso{
+  text-align:center;
+  font-size:13px;
+}
+
+.nav-percurso a{
+  text-decoration:none;
+  color:#666;
+}
+
+.nav-percurso a:hover{
+  color:#3A5A40;
+}
 </style>
 
 </head>
@@ -57,6 +93,27 @@
   <p>Texto inicial do capítulo.</p>
 
 </section>
+
+  <!-- ===== NAVEGAÇÃO ENTRE CAPÍTULOS ===== -->
+<div class="navegacao-capitulos">
+
+  <div class="nav-linha">
+   <a href="index.html" class="nav-anterior">
+  ← Início
+</a>
+
+    <a href="02-para-onde-vai-o-dinheiro.html" class="nav-proximo">
+      Próximo capítulo →
+    </a>
+  </div>
+
+  <div class="nav-percurso">
+    <a href="index.html">
+      Voltar ao percurso
+    </a>
+  </div>
+
+</div>
 
 <!-- ===== RODAPÉ ===== -->
 <footer class="rodape">
