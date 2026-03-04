@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>>03 — Como as decisões são tomadas | Terceiro Nível</title>
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSS1F9VS4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TMSS1F9VS4');
+</script>
+
+<style>
+.conteudo-capitulo{
+  max-width:760px;
+ margin:60px auto 80px;
+  padding:0 20px;
+}
+
+.conteudo-capitulo h1{
+  font-size:28px;
+  margin-bottom:25px;
+  line-height:1.3;
+}
+
+.conteudo-capitulo p{
+  font-size:16px;
+  line-height:1.7;
+  margin-bottom:20px;
+  color:#333;
+}
+
+  .navegacao-capitulos{
+  max-width:760px;
+  margin:60px auto 80px;
+  padding:0 20px;
+}
+
+.nav-linha{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.nav-linha a{
+  text-decoration:none;
+  color:#3A5A40;
+}
+
+.nav-linha a:hover{
+  text-decoration:underline;
+}
+
+.nav-percurso{
+  text-align:center;
+  font-size:13px;
+}
+
+.nav-percurso a{
+  text-decoration:none;
+  color:#666;
+}
+
+.nav-percurso a:hover{
+  color:#3A5A40;
+}
+
+  .pergunta-final{
+  font-size:18px;
+  margin-top:30px;
+}
+
+  .bloco-dado{
+  border-left:4px solid #3A5A40;
+  padding:15px 20px;
+  margin:30px 0;
+  background:#f8f8f8;
+  font-size:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== CABEÇALHO ===== -->
+<div class="topo centro">
+  <div class="marca">
+    <a href="index.html">
+      <span>TERCEIRO NÍVEL</span>
+    </a>
+  </div>
+</div>
+
+<!-- ===== CONTEÚDO DO CAPÍTULO ===== -->
+<section class="conteudo-capitulo">
+
+<h1>03 — Como as decisões são tomadas</h1>
+
+<p>O orçamento não surge automaticamente. Ele é construído por decisões humanas e institucionais.</p>
+
+<p>No Brasil, a proposta orçamentária é elaborada pelo Poder Executivo e enviada ao Congresso Nacional.</p>
+
+<p>No Congresso, o texto pode ser alterado. Parlamentares apresentam emendas. Prioridades são discutidas. Valores podem ser ajustados.</p>
+
+<p>Após debate e votação, o orçamento é aprovado e passa a orientar a execução dos gastos públicos.</p>
+
+<p>Esse processo define quais áreas recebem mais recursos e quais recebem menos.</p>
+
+<p>Embora existam limites legais e despesas obrigatórias, há margem para escolha dentro desses limites.</p>
+
+<p>Essas escolhas não são neutras. Elas refletem correlação de forças, acordos políticos e decisões institucionais.</p>
+
+<p>O resultado final do orçamento é, portanto, uma combinação entre regras fixas e decisões tomadas ao longo do processo legislativo.</p>
+
+<p class="pergunta-final"><strong>Quem influencia essas decisões?</strong></p>
+
+</section>
+
+  <!-- ===== NAVEGAÇÃO ENTRE CAPÍTULOS ===== -->
+<div class="navegacao-capitulos">
+
+  <div class="nav-linha">
+ <a href="02-para-onde-vai-o-dinheiro.html">← Capítulo anterior</a>
+<a href="04-por-que-quase-ninguem-acompanha.html">Próximo capítulo →</a>
+  </div>
+
+  <div class="nav-percurso">
+    <a href="index.html">
+      Voltar ao percurso
+    </a>
+  </div>
+
+</div>
+
+<!-- ===== RODAPÉ ===== -->
+<footer class="rodape">
+  <div>TERCEIRO NÍVEL © 2026</div>
+  <div>
+    <a href="sobre.html">Sobre</a> |
+    <a href="contato.html">Contato</a> |
+    <a href="https://whatsapp.com/channel/0029Vb7GLPv2ER6ZugDYMO2y" target="_blank">
+      Receber atualizações no WhatsApp
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
