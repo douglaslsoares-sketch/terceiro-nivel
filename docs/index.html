@@ -218,8 +218,10 @@ const cards = document.querySelectorAll(".card");
 let current = 0;
 let scrolling = false;
 
-function scrollToCard(index){
+function goTo(index){
+
 if(index < 0 || index >= cards.length) return;
+
 scrolling = true;
 current = index;
 
@@ -230,16 +232,44 @@ behavior:"smooth"
 setTimeout(()=>{
 scrolling=false;
 },600);
+
 }
+
+/* DESKTOP SCROLL */
 
 window.addEventListener("wheel", e => {
 
 if(scrolling) return;
 
 if(e.deltaY > 0){
-scrollToCard(current + 1);
+goTo(current + 1);
 }else{
-scrollToCard(current - 1);
+goTo(current - 1);
+}
+
+});
+
+/* MOBILE SWIPE */
+
+let touchStart = 0;
+let touchEnd = 0;
+
+window.addEventListener("touchstart", e=>{
+touchStart = e.changedTouches[0].screenY;
+});
+
+window.addEventListener("touchend", e=>{
+
+if(scrolling) return;
+
+touchEnd = e.changedTouches[0].screenY;
+
+if(touchStart - touchEnd > 50){
+goTo(current + 1);
+}
+
+if(touchEnd - touchStart > 50){
+goTo(current - 1);
 }
 
 });
