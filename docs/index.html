@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 
@@ -14,10 +14,7 @@ margin:0;
 font-family:Arial, sans-serif;
 color:#222;
 background:#fff;
-
-scroll-snap-type:y mandatory;
-overflow-y:scroll;
-height:100vh;
+overflow:hidden;
 }
 
 header{
@@ -29,7 +26,7 @@ border-bottom:1px solid #eee;
 }
 
 .card{
-min-height:100vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -38,8 +35,6 @@ text-align:center;
 padding:40px 20px;
 max-width:760px;
 margin:auto;
-
-scroll-snap-align:start;
 }
 
 .card h1{
@@ -111,110 +106,70 @@ color:#777;
 TERCEIRO NÍVEL
 </header>
 
-<!-- CARD 1 -->
-
 <section class="card">
-
 <h1>Você sustenta o país.</h1>
-
 <p>
 Quem faz o país funcionar<br>
 precisa entender<br>
 como o país funciona.
 </p>
-
 </section>
 
-<!-- CARD 2 -->
-
 <section class="card">
-
 <p>Todos os dias milhões de pessoas:</p>
-
 <ul>
 <li>trabalham</li>
 <li>consomem</li>
 <li>pagam impostos</li>
 </ul>
-
 <p>Essa dinâmica garante o funcionamento do país.</p>
-
 <p><strong>Mas como tudo isso está organizado?</strong></p>
-
 </section>
-
-<!-- CARD 3 -->
 
 <section class="card">
-
 <h2>Estrutura.</h2>
-
 </section>
-
-<!-- CARD 4 -->
 
 <section class="card infografico">
-
 <img src="assets/img/base-infografico.png" alt="Estrutura da sociedade">
-
 </section>
 
-<!-- CARD 5 -->
-
 <section class="card">
-
 <p>
 A base da estrutura<br>
 é onde a maior parte da sociedade está.
 </p>
-
 <p>Chamamos essa base de:</p>
-
 <h2>TERCEIRO NÍVEL</h2>
-
 </section>
 
-<!-- CARD 6 -->
-
 <section class="card">
-
 <p>
 Quando entendemos essa estrutura,
 algumas perguntas começam a surgir.
 </p>
-
 <ul>
 <li>Para onde vai o dinheiro que sai da base?</li>
 <li>Como decisões que afetam o país são tomadas?</li>
 <li>Quem influencia essas decisões?</li>
 </ul>
-
 </section>
 
-<!-- CARD 7 -->
-
 <section class="card">
-
 <p>
 O Terceiro Nível existe para ajudar a compreender essas questões.
 </p>
-
 <p>
 Para observar como a estrutura funciona
 e acompanhar decisões que impactam diretamente
 a base da sociedade.
 </p>
-
 </section>
 
-<!-- CARD FINAL -->
-
 <section class="card">
-
 <p>
 O país funciona sobre uma base formada por milhões de pessoas.
 </p>
-
 <p>
 <strong>
 Quem faz o país funcionar<br>
@@ -222,13 +177,9 @@ precisa entender<br>
 como o país funciona.
 </strong>
 </p>
-
 </section>
 
-<!-- PONTOS DE OBSERVAÇÃO -->
-
 <section class="card">
-
 <h2>Pontos de observação</h2>
 
 <div class="temas">
@@ -260,6 +211,40 @@ Por que a base quase não percebe
 <footer>
 TERCEIRO NÍVEL © 2026
 </footer>
+
+<script>
+
+const cards = document.querySelectorAll(".card");
+let current = 0;
+let scrolling = false;
+
+function scrollToCard(index){
+if(index < 0 || index >= cards.length) return;
+scrolling = true;
+current = index;
+
+cards[index].scrollIntoView({
+behavior:"smooth"
+});
+
+setTimeout(()=>{
+scrolling=false;
+},600);
+}
+
+window.addEventListener("wheel", e => {
+
+if(scrolling) return;
+
+if(e.deltaY > 0){
+scrollToCard(current + 1);
+}else{
+scrollToCard(current - 1);
+}
+
+});
+
+</script>
 
 </body>
 </html>
