@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,79 +10,75 @@
 <style>
 
 body{
-font-family: Arial, sans-serif;
 margin:0;
-background:#ffffff;
+font-family:Arial, sans-serif;
 color:#222;
-line-height:1.6;
-}
-
-.container{
-max-width:760px;
-margin:auto;
-padding:40px 20px;
+background:#fff;
 }
 
 header{
 text-align:center;
-padding:30px 20px;
-border-bottom:1px solid #eee;
+padding:25px;
 font-weight:700;
 letter-spacing:2px;
+border-bottom:1px solid #eee;
 }
 
 .card{
-padding:60px 0;
-border-bottom:1px solid #eee;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px 20px;
+max-width:760px;
+margin:auto;
 }
 
 .card h1{
-font-size:32px;
+font-size:34px;
 margin-bottom:20px;
 }
 
 .card h2{
-font-size:24px;
+font-size:26px;
 margin-bottom:20px;
 }
 
 .card p{
 font-size:18px;
-margin:12px 0;
+margin:10px 0;
+line-height:1.6;
 }
 
-.center{
-text-align:center;
+ul{
+list-style:none;
+padding:0;
+margin:20px 0;
 }
 
-.infografico{
-text-align:center;
+li{
+font-size:18px;
+margin:10px 0;
 }
 
 .infografico img{
-max-width:520px;
 width:100%;
+max-width:520px;
 height:auto;
 }
 
-.lista{
-margin-top:20px;
-}
-
-.lista li{
-margin:8px 0;
-font-size:18px;
-}
-
 .temas{
-margin-top:40px;
+width:100%;
+max-width:600px;
 }
 
 .tema{
 display:block;
-padding:25px;
 border:1px solid #ddd;
-margin-bottom:15px;
+padding:20px;
+margin:12px 0;
 text-decoration:none;
 color:#222;
 transition:0.2s;
@@ -99,6 +96,7 @@ color:#777;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -107,11 +105,9 @@ color:#777;
 TERCEIRO NÍVEL
 </header>
 
-<div class="container">
-
 <!-- CARD 1 -->
 
-<section class="card center">
+<section class="card">
 
 <h1>Você sustenta o país.</h1>
 
@@ -129,15 +125,13 @@ como o país funciona.
 
 <p>Todos os dias milhões de pessoas:</p>
 
-<ul class="lista">
+<ul>
 <li>trabalham</li>
 <li>consomem</li>
 <li>pagam impostos</li>
 </ul>
 
-<p>
-Essa dinâmica garante o funcionamento do país.
-</p>
+<p>Essa dinâmica garante o funcionamento do país.</p>
 
 <p><strong>Mas como tudo isso está organizado?</strong></p>
 
@@ -145,7 +139,7 @@ Essa dinâmica garante o funcionamento do país.
 
 <!-- CARD 3 -->
 
-<section class="card center">
+<section class="card">
 
 <h2>Estrutura.</h2>
 
@@ -168,9 +162,7 @@ A base da estrutura<br>
 é onde a maior parte da sociedade está.
 </p>
 
-<p>
-Chamamos essa base de:
-</p>
+<p>Chamamos essa base de:</p>
 
 <h2>TERCEIRO NÍVEL</h2>
 
@@ -185,7 +177,7 @@ Quando entendemos essa estrutura,
 algumas perguntas começam a surgir.
 </p>
 
-<ul class="lista">
+<ul>
 <li>Para onde vai o dinheiro que sai da base?</li>
 <li>Como decisões que afetam o país são tomadas?</li>
 <li>Quem influencia essas decisões?</li>
@@ -211,7 +203,7 @@ a base da sociedade.
 
 <!-- CARD FINAL -->
 
-<section class="card center">
+<section class="card">
 
 <p>
 O país funciona sobre uma base formada por milhões de pessoas.
@@ -232,10 +224,6 @@ como o país funciona.
 <section class="card">
 
 <h2>Pontos de observação</h2>
-
-<p>
-Cada ponto ajuda a enxergar melhor como o país funciona.
-</p>
 
 <div class="temas">
 
@@ -263,12 +251,8 @@ Por que a base quase não percebe
 
 </section>
 
-</div>
-
 <footer>
-
 TERCEIRO NÍVEL © 2026
-
 </footer>
 
 </body>
