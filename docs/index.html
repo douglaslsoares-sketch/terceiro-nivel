@@ -110,6 +110,40 @@ text-decoration:underline;
   height: auto;
 }
 
+  /* ===== TELA 1 ESPECÍFICA ===== */
+
+.tela1{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+
+  /* padding menor para caber tudo */
+  padding:20px 16px;
+  gap:16px;
+
+  /* remove limitação da caixa */
+  max-width:none;
+  margin:0;
+}
+
+/* ===== IMAGEM (SOBRA/FALTA) ===== */
+
+.marca{
+  width:clamp(220px, 55vw, 420px);
+  height:auto;
+}
+
+/* ===== FRASE ===== */
+
+.subtitulo{
+  font-size:clamp(16px, 2.5vw, 20px);
+  margin-top:8px;
+  max-width:380px;
+  line-height:1.4;
+}
 </style>
 
 </head>
