@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terceiro Nível</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+scroll-snap-type:y mandatory;
+}
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:#111;
+background:#ffffff;
+}
+
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 20px;
+scroll-snap-align:start;
+max-width:900px;
+margin:auto;
+}
+
+h1{font-size:40px;margin-bottom:20px;}
+h2{font-size:26px;margin-bottom:20px;}
+
+p{
+font-size:18px;
+line-height:1.6;
+max-width:600px;
+}
+
+ul{
+list-style:none;
+padding:0;
+font-size:18px;
+line-height:1.8;
+}
+
+/* INFOGRAFICOS */
+
+.infografico{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:15px;
+width:100%;
+max-width:400px;
+}
+
+.bloco{
+padding:20px;
+border:2px solid #111;
+border-radius:8px;
+}
+
+.base{background:#f5f5f5;}
+.influencia{background:#eaeaea;}
+.decisao{background:#dddddd;}
+
+.seta{
+font-size:22px;
+}
+
+.fluxo{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
+margin-top:30px;
+}
+
+.caixa{
+border:2px solid #111;
+padding:15px;
+border-radius:8px;
+width:250px;
+}
+
+.tracejado{
+border-top:2px dashed #111;
+width:2px;
+height:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TELA 1 -->
+<section class="section">
+<h1>Você sabe para onde vai o seu dinheiro?</h1>
+<p>Uma parte você vê.<br>Outra parte… não.</p>
+</section>
+
+<!-- TELA 2 -->
+<section class="section">
+<h2>Você está na base</h2>
+<p>
+Do seu trabalho.<br>
+Do consumo.<br>
+Dos impostos.<br><br>
+É daqui que o país funciona.
+</p>
+</section>
+
+<!-- TELA 3 -->
+<section class="section">
+<h2>Mas o caminho não é tão simples</h2>
+<p>
+O dinheiro não vai direto.<br><br>
+Ele passa por decisões.<br>
+E por influências.
+</p>
+</section>
+
+<!-- TELA 4 - INFOGRAFICO 3 NIVEIS -->
+<section class="section">
+<h2>Existe uma estrutura</h2>
+
+<div class="infografico">
+
+<div class="bloco decisao">
+NÍVEL 1<br><strong>Decisão</strong><br>
+Governo e instituições
+</div>
+
+<div class="seta">↓</div>
+
+<div class="bloco influencia">
+NÍVEL 2<br><strong>Influência</strong><br>
+Interesses e grupos econômicos
+</div>
+
+<div class="seta">↓</div>
+
+<div class="bloco base">
+NÍVEL 3<br><strong>Base</strong><br>
+Trabalho, consumo e impostos
+</div>
+
+</div>
+
+<p><br>Você está aqui.</p>
+</section>
+
+<!-- TELA 5 - FLUXO DO DINHEIRO -->
+<section class="section">
+<h2>Para onde vai o dinheiro?</h2>
+
+<div class="fluxo">
+
+<div class="caixa">BASE</div>
+
+<div class="seta">↑</div>
+
+<div class="caixa">ORÇAMENTO</div>
+
+<div class="seta">↑</div>
+
+<div class="caixa">SAÚDE</div>
+<div class="caixa">EDUCAÇÃO</div>
+<div class="caixa">INFRAESTRUTURA</div>
+
+<div class="tracejado"></div>
+
+<div class="caixa">RETORNA À BASE</div>
+
+<br>
+
+<div class="caixa">JUROS</div>
+
+<div class="seta">→</div>
+
+<div class="caixa">DÍVIDA PÚBLICA</div>
+
+</div>
+
+</section>
+
+<!-- TELA 6 -->
+<section class="section">
+<h2>O orçamento não começa do zero</h2>
+<p>
+Parte já tem destino definido.<br><br>
+Antes da escolha.<br>
+Antes do debate.
+</p>
+</section>
+
+<!-- TELA 7 -->
+<section class="section">
+<h2>O que você vê não é tudo</h2>
+<p>
+Nem tudo aparece.<br><br>
+E nem tudo que aparece<br>
+é o que mais pesa.
+</p>
+</section>
+
+<!-- TELA 8 -->
+<section class="section">
+<h2>Então, para onde vai o seu dinheiro?</h2>
+<p>
+Você sustenta.<br><br>
+Mas entende?
+</p>
+</section>
+
+<!-- TELA 9 -->
+<section class="section">
+<h2>Entender é o começo</h2>
+<p>Para enxergar a estrutura.</p>
+</section>
+
+<!-- TELA 10 -->
+<section class="section">
+<h2>Pontos de observação</h2>
+<ul>
+<li>Como funciona o orçamento</li>
+<li>Para onde vai a maior parte</li>
+<li>Quem influencia</li>
+<li>Por que quase ninguém percebe</li>
+</ul>
+</section>
+
+</body>
+</html>
