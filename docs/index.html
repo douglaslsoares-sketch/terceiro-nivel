@@ -95,6 +95,46 @@ width:2px;
 height:30px;
 }
 
+  <!-- AJUSTE DINÂMICO DO TAMANHO DA IMAGEM BASE-INFOGRÁFICO --!>
+  .section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:center;
+text-align:center;
+padding:20px;
+box-sizing:border-box;
+}
+
+/* Título menor para caber melhor */
+.section h2{
+font-size:22px;
+margin-bottom:10px;
+}
+
+/* Container ocupa o espaço restante */
+.img-container{
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
+}
+
+/* AQUI ESTÁ O SEGREDO */
+.img-container img{
+max-height:75vh;
+width:auto;
+max-width:100%;
+height:auto;
+display:block;
+}
+
+
+  
+  
+
 </style>
 </head>
 
