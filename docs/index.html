@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terceiro Nível</title>
+
+<style>
+:root{
+  --verde:#3A5A40;
+  --verde-escuro:#2D4A34;
+  --fundo:#ffffff;
+  --texto:#111111;
+  --cinza:#666666;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-snap-type:y mandatory;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+}
+
+.section{
+  min-height:100vh;
+  scroll-snap-align:start;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:28px 20px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.container{
+  width:100%;
+  max-width:640px;
+  margin:0 auto;
+}
+
+.hero .container{
+  max-width:520px;
+}
+
+h1{
+  margin:0 0 16px 0;
+  font-size:42px;
+  line-height:0.98;
+  letter-spacing:1px;
+  font-weight:700;
+}
+
+h2{
+  margin:0 0 16px 0;
+  font-size:30px;
+  line-height:1.1;
+  font-weight:700;
+}
+
+p{
+  margin:0;
+  font-size:20px;
+  line-height:1.55;
+  max-width:620px;
+}
+
+.frase-forte{
+  font-weight:700;
+}
+
+.frase-final{
+  display:block;
+  margin-top:10px;
+  font-weight:700;
+  color:var(--verde);
+}
+
+.img-container{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 0 8px 0;
+}
+
+.img-container img{
+  width:auto;
+  max-width:100%;
+  max-height:54vh;
+  height:auto;
+  display:block;
+}
+
+.hero .img-container{
+  margin-bottom:2px;
+}
+
+.hero .img-container img{
+  max-height:58vh;
+}
+
+.texto-curto{
+  max-width:500px;
+  margin:0 auto;
+}
+
+.subtexto{
+  color:var(--cinza);
+}
+
+.botao{
+  display:inline-block;
+  margin-top:26px;
+  background:var(--verde);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  padding:14px 22px;
+  border-radius:999px;
+  font-size:16px;
+}
+
+.grade-camisetas{
+  width:100%;
+  max-width:380px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:24px;
+}
+
+.item-camiseta{
+  border:2px solid var(--verde);
+  border-radius:14px;
+  padding:18px 16px;
+  font-size:20px;
+  font-weight:700;
+  color:var(--verde);
+}
+
+.linha-verde{
+  width:76px;
+  height:4px;
+  background:var(--verde);
+  border-radius:999px;
+  margin:0 auto 16px auto;
+}
+
+@media (max-width:480px){
+
+  .section{
+    padding:22px 18px;
+  }
+
+  h1{
+    font-size:34px;
+    margin-bottom:14px;
+  }
+
+  h2{
+    font-size:24px;
+    margin-bottom:14px;
+  }
+
+  p{
+    font-size:18px;
+    line-height:1.5;
+  }
+
+  .hero .img-container img{
+    max-height:52vh;
+  }
+
+  .img-container img{
+    max-height:50vh;
+  }
+
+  .item-camiseta{
+    font-size:18px;
+    padding:16px 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TELA 1 -->
+<section class="section hero">
+  <div class="container">
+    <div class="img-container">
+      <img src="assets/img/sou-terceiro-nivel.png" alt="Sou Terceiro Nível">
+    </div>
+
+    <p class="texto-curto">
+      Tem gente que aparece.<br>
+      Tem gente que decide.<br>
+      Tem gente que faz tudo funcionar.
+      <span class="frase-final">Sem você, nada funciona.</span>
+    </p>
+  </div>
+</section>
+
+<!-- TELA 2 -->
+<section class="section">
+  <div class="container">
+    <h2>Você está aqui</h2>
+    <div class="linha-verde"></div>
+
+    <div class="img-container">
+      <img src="assets/img/base-infografico.png" alt="Estrutura dos três níveis">
+    </div>
+
+    <p class="frase-forte">A base sustenta a estrutura.</p>
+  </div>
+</section>
+
+<!-- TELA 3 -->
+<section class="section">
+  <div class="container">
+    <h2>O que é o Terceiro Nível?</h2>
+    <div class="linha-verde"></div>
+
+    <p>
+      O Terceiro Nível é a base da sociedade.<br><br>
+      É onde estão as pessoas que trabalham, consomem e pagam impostos.<br><br>
+      É essa base que sustenta o funcionamento do país.
+    </p>
+  </div>
+</section>
+
+<!-- TELA 4 -->
+<section class="section">
+  <div class="container">
+    <h2>Por que isso importa?</h2>
+    <div class="linha-verde"></div>
+
+    <p>
+      Durante muito tempo, a base foi tratada como plateia.<br><br>
+      Mas quem sustenta não pode ser apenas plateia.<br><br>
+      Precisa se reconhecer como protagonista.
+    </p>
+  </div>
+</section>
+
+<!-- TELA 5 -->
+<section class="section">
+  <div class="container">
+    <h2>O Brasil funciona de baixo pra cima.</h2>
+    <div class="linha-verde"></div>
+
+    <p>
+      Quem está na base não é detalhe.<br>
+      Não é sobra.<br>
+      Não é cenário.<br><br>
+      <span class="frase-forte">É fundamento.</span>
+    </p>
+  </div>
+</section>
+
+<!-- TELA 6 -->
+<section class="section">
+  <div class="container">
+    <h2>Quer receber conteúdos curtos?</h2>
+    <div class="linha-verde"></div>
+
+    <p>
+      Mensagens simples, diretas e aos poucos.<br><br>
+      Para entender melhor a estrutura, o dinheiro, as decisões e o lugar da base nisso tudo.
+    </p>
+
+    <a class="botao" href="https://whatsapp.com/channel/0029Vb7GLPv2ER6ZugDYMO2y" target="_blank">
+      Receber no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- TELA 7 -->
+<section class="section">
+  <div class="container">
+    <h2>Vista essa ideia</h2>
+    <div class="linha-verde"></div>
+
+    <p class="subtexto">
+      Camisetas para afirmar identidade, posição e consciência de base.
+    </p>
+
+    <div class="grade-camisetas">
+      <div class="item-camiseta">SOU TERCEIRO NÍVEL</div>
+      <div class="item-camiseta">VOCÊ ESTÁ NA BASE</div>
+      <div class="item-camiseta">SEM VOCÊ, NADA FUNCIONA</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
