@@ -15,6 +15,11 @@
   --cinza:#666;
 }
 
+/* RESET BÁSICO */
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family:Arial, sans-serif;
@@ -22,20 +27,32 @@ body{
   color:var(--texto);
 }
 
+/* PADRÃO DO SITE (igual index) */
+.section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:60px 20px;
+}
+
+/* CONTAINER CENTRAL */
 .container{
   max-width:640px;
-  margin:0 auto;
-  padding:40px 20px;
+  width:100%;
 }
 
+/* TÍTULO */
 h1{
-  font-size:32px;
-  margin-bottom:20px;
+  font-size:28px;
+  margin-bottom:30px;
   color:var(--verde);
+  text-align:left;
 }
 
+/* LEITURAS */
 .leitura{
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 
 .leitura h2{
@@ -48,9 +65,10 @@ h1{
   line-height:1.6;
 }
 
+/* BOTÃO VOLTAR */
 .voltar{
   display:inline-block;
-  margin-top:30px;
+  margin-top:20px;
   color:var(--verde);
   text-decoration:none;
   font-weight:bold;
@@ -60,6 +78,8 @@ h1{
 </head>
 
 <body>
+
+<section class="section">
 
 <div class="container">
 
@@ -174,5 +194,8 @@ Porque está mais exposta.
 <a class="voltar" href="index.html">← Voltar</a>
 
 </div>
+
+</section>
+
 </body>
 </html>
