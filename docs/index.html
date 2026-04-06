@@ -784,5 +784,23 @@ funcionaria.
 
   </div>
 </section>
+  <script>
+  const header = document.querySelector('.header');
+  const telaInfografico = document.querySelector('.full-infografico');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        header.classList.add('oculto');
+      } else {
+        header.classList.remove('oculto');
+      }
+    });
+  }, {
+    threshold: 0.6
+  });
+
+  observer.observe(telaInfografico);
+</script>
 </body>
 </html>
