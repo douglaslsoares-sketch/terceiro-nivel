@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Comentar | Terceiro Nível</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:#111;
+background:#ffffff;
+}
+
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 20px;
+max-width:900px;
+margin:auto;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+.linha-verde{
+width:60px;
+height:3px;
+background:#3A5A40;
+margin:20px auto;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+max-width:600px;
+}
+
+textarea{
+width:100%;
+max-width:600px;
+height:150px;
+margin-top:20px;
+padding:15px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+resize:none;
+}
+
+button{
+margin-top:20px;
+padding:12px 24px;
+font-size:16px;
+background:#3A5A40;
+color:#fff;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="section">
+  
+  <h2>Sobre o que você acabou de ler</h2>
+  <div class="linha-verde"></div>
+
+  <p>
+    Às vezes, uma mensagem simples já muda a forma de ver.<br><br>
+    O que isso te fez pensar?
+  </p>
+
+  <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST">
+
+    <textarea name="mensagem" placeholder="Escreva aqui seu comentário..." required></textarea>
+
+    <!-- origem da mensagem -->
+    <input type="hidden" name="origem" value="eleicao1">
+
+    <!-- redirecionamento -->
+    <input type="hidden" name="_redirect" value="https://terceironivel.org/obrigado.html">
+
+    <br>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+  <p style="margin-top:30px; font-size:14px; color:#666;">
+    Aqui, cada percepção ajuda a enxergar melhor o todo.
+  </p>
+
+</section>
+
+</body>
+</html>
