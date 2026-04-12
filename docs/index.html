@@ -192,34 +192,45 @@
       color:var(--verde);
     }
 
-    .assinatura-final{
-      margin-top:42px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:12px;
-    }
+   .assinatura-final{
+  margin-top:80px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+}
 
-    .triangulo-final{
-      width:0;
-      height:0;
-      border-left:16px solid transparent;
-      border-right:16px solid transparent;
-      border-top:28px solid var(--verde);
-    }
+.linha-final{
+  width:120px;
+  height:1px;
+  background:#E5E7E5;
+}
 
-    .dominio-final{
-      font-family:'League Spartan', sans-serif;
-      font-size:14px;
-      letter-spacing:1.8px;
-      text-transform:uppercase;
-      color:var(--cinza);
-    }
+.triangulo-final{
+  width:0;
+  height:0;
+  border-left:14px solid transparent;
+  border-right:14px solid transparent;
+  border-top:24px solid var(--verde);
+  opacity:0.9;
+}
 
-    .dominio-final a{
-      color:inherit;
-      text-decoration:none;
-    }
+.dominio-final{
+  font-family:'League Spartan', sans-serif;
+  font-size:13px;
+  letter-spacing:2.2px;
+  text-transform:uppercase;
+  color:#7A7A7A;
+}
+
+.dominio-final a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.dominio-final a:hover{
+  color:var(--verde);
+}
 
     .secao-estreita p{
       max-width:560px;
@@ -305,6 +316,25 @@
         letter-spacing:1.4px;
       }
     }
+
+    .botao.principal{
+  background:var(--verde);
+  color:var(--branco);
+  border:2px solid var(--verde);
+}
+
+.botao.whatsapp{
+  background:transparent;
+  color:var(--cinza);
+  border:2px solid #D9DDD8;
+  font-size:15px;
+  letter-spacing:0.2px;
+}
+
+.botao.whatsapp:hover{
+  color:var(--verde);
+  border-color:var(--verde);
+}
   </style>
 </head>
 <body>
@@ -474,23 +504,29 @@
 
       <div class="frase-final">Com você muda.</div>
 
-      <div class="botoes">
-        <a class="botao" href="https://mont.ink/nao-e-seu" target="_blank" rel="noopener noreferrer">
-          Ver camisetas
-        </a>
+  <div class="botoes">
+  <a class="botao principal" href="https://mont.ink/nao-e-seu" target="_blank" rel="noopener noreferrer">
+    Ver camisetas
+  </a>
 
-        <a class="botao secundario" href="https://whatsapp.com/channel/0029Vb7GLPv2ER6ZugDYMO2y" target="_blank" rel="noopener noreferrer">
-          Receber mensagens
-        </a>
-      </div>
+  <a class="botao whatsapp" href="https://whatsapp.com/channel/0029Vb7GLPv2ER6ZugDYMO2y" target="_blank" rel="noopener noreferrer">
+    Receber leituras pelo WhatsApp
+  </a>
+</div>
 
-      <div class="assinatura-final">
-        <div class="triangulo-final"></div>
-        <div class="dominio-final">
-          <a href="https://terceironivel.org" target="_blank" rel="noopener noreferrer">terceironivel.org</a>
-        </div>
-      </div>
-    </div>
+    <div class="assinatura-final">
+
+  <div class="linha-final"></div>
+
+  <div class="triangulo-final"></div>
+
+  <div class="dominio-final">
+    <a href="https://terceironivel.org" target="_blank" rel="noopener noreferrer">
+      terceironivel.org
+    </a>
+  </div>
+
+</div>
   </section>
 
 </body>
