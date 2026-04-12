@@ -1,540 +1,117 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terceiro Nível</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --verde:#3A5A40;
-      --fundo:#F8F8F8;
-      --texto:#111111;
-      --cinza:#666666;
-      --cinza-claro:#8A8A8A;
-      --branco:#FFFFFF;
-    }
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    html{
-      scroll-behavior:smooth;
-      scroll-snap-type:y mandatory;
-    }
-
-    body{
-      background:var(--fundo);
-      color:var(--texto);
-      font-family:'Libre Baskerville', serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-
-    .section{
-      min-height:100vh;
-      scroll-snap-align:start;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:56px 24px;
-    }
-
-    .container{
-      width:100%;
-      max-width:760px;
-      text-align:center;
-    }
-
-    h1, h2{
-      font-family:'League Spartan', sans-serif;
-    }
-
-    h1{
-      font-size:72px;
-      line-height:0.9;
-      letter-spacing:1.5px;
-      font-weight:800;
-      margin-bottom:22px;
-      text-transform:uppercase;
-    }
-
-    h2{
-      font-size:34px;
-      line-height:1.08;
-      letter-spacing:0.3px;
-      font-weight:700;
-      margin-bottom:24px;
-      text-transform:uppercase;
-    }
-
-    p{
-      max-width:600px;
-      margin:0 auto;
-      font-size:20px;
-      line-height:1.75;
-      color:var(--texto);
-    }
-
-    .hero{
-      position:relative;
-      background:linear-gradient(to bottom, rgba(58,90,64,0.03), rgba(58,90,64,0));
-    }
-
-    .hero .container{
-      max-width:900px;
-    }
-
-    .hero-kicker{
-      font-family:'League Spartan', sans-serif;
-      font-size:14px;
-      letter-spacing:2.4px;
-      text-transform:uppercase;
-      color:var(--verde);
-      margin-bottom:18px;
-    }
-
-    .hero-subtitulo{
-      max-width:760px;
-      margin:0 auto;
-      font-size:38px;
-      line-height:1.18;
-      color:var(--texto);
-    }
-
-    .hero-subtitulo strong{
-      font-weight:700;
-    }
-
-    .hero-linha{
-      width:92px;
-      height:4px;
-      background:var(--verde);
-      margin:30px auto 24px;
-      border-radius:999px;
-    }
-
-    .hero-resposta{
-      max-width:560px;
-      margin:0 auto;
-      font-size:15px;
-      line-height:1.6;
-      color:var(--cinza);
-    }
-
-    .hero-rodape{
-      margin-top:34px;
-      font-family:'League Spartan', sans-serif;
-      font-size:13px;
-      letter-spacing:1.6px;
-      text-transform:uppercase;
-      color:var(--cinza-claro);
-    }
-
-    .destaque{
-      color:var(--verde);
-      font-weight:700;
-    }
-
-    .frase-final{
-      font-family:'League Spartan', sans-serif;
-      font-size:32px;
-      line-height:1.15;
-      font-weight:700;
-      color:var(--verde);
-      margin-top:22px;
-      letter-spacing:0.2px;
-      text-transform:uppercase;
-    }
-
-    .botoes{
-      margin-top:42px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      align-items:center;
-    }
-
-    .botao{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:100%;
-      max-width:330px;
-      min-height:56px;
-      padding:16px 22px;
-      border-radius:999px;
-      text-decoration:none;
-      font-family:'League Spartan', sans-serif;
-      font-size:17px;
-      font-weight:700;
-      letter-spacing:0.3px;
-      transition:0.2s ease;
-      border:2px solid var(--verde);
-    }
-
-    .botao:hover{
-      opacity:0.92;
-    }
-
-    .botao{
-      background:var(--verde);
-      color:var(--branco);
-    }
-
-    .botao.secundario{
-      background:transparent;
-      color:var(--verde);
-    }
-
-   .assinatura-final{
-  margin-top:80px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;
+<style>
+:root{
+  --verde:#3A5A40;
+  --fundo:#F8F8F8;
+  --texto:#111111;
+  --cinza:#666666;
+  --cinza-claro:#8A8A8A;
+  --branco:#FFFFFF;
 }
 
-.linha-final{
-  width:120px;
-  height:1px;
-  background:#E5E7E5;
-}
+/* ========================= */
+/* AJUSTES EDITORIAIS GERAIS */
+/* ========================= */
 
-.triangulo-final{
-  width:0;
-  height:0;
-  border-left:14px solid transparent;
-  border-right:14px solid transparent;
-  border-top:24px solid var(--verde);
-  opacity:0.9;
-}
-
-.dominio-final{
-  font-family:'League Spartan', sans-serif;
-  font-size:13px;
-  letter-spacing:2.2px;
+h1{
+  font-size:72px;
+  line-height:0.9;
+  letter-spacing:1.5px;
+  font-weight:800;
+  margin-bottom:40px; /* ↑ mais respiro */
   text-transform:uppercase;
-  color:#7A7A7A;
 }
 
-.dominio-final a{
-  color:inherit;
-  text-decoration:none;
+.hero-subtitulo{
+  max-width:620px; /* ↓ mais estreito */
+  margin:0 auto;
+  font-size:36px; /* ↓ leve redução (mais elegante) */
+  line-height:1.15;
+  letter-spacing:0.4px;
+  margin-bottom:28px;
 }
 
-.dominio-final a:hover{
-  color:var(--verde);
-}
-
-    .secao-estreita p{
-      max-width:560px;
-    }
-
-    .ultima p{
-      max-width:520px;
-    }
-
-    @media (max-width:860px){
-      h1{
-        font-size:58px;
-      }
-
-      .hero-subtitulo{
-        font-size:32px;
-      }
-    }
-
-    @media (max-width:640px){
-      .section{
-        padding:48px 20px;
-      }
-
-      h1{
-        font-size:42px;
-        line-height:0.95;
-        letter-spacing:1px;
-        margin-bottom:18px;
-      }
-
-      h2{
-        font-size:28px;
-        line-height:1.1;
-        margin-bottom:20px;
-      }
-
-      p{
-        font-size:18px;
-        line-height:1.72;
-      }
-
-      .hero-kicker{
-        font-size:12px;
-        letter-spacing:2px;
-        margin-bottom:16px;
-      }
-
-      .hero-subtitulo{
-        font-size:26px;
-        line-height:1.2;
-        max-width:540px;
-      }
-
-      .hero-linha{
-        width:72px;
-        margin:24px auto 18px;
-      }
-
-      .hero-resposta{
-        font-size:13px;
-        line-height:1.55;
-        max-width:360px;
-      }
-
-      .hero-rodape{
-        margin-top:26px;
-        font-size:11px;
-        letter-spacing:1.4px;
-      }
-
-      .frase-final{
-        font-size:26px;
-      }
-
-      .botao{
-        font-size:16px;
-        min-height:54px;
-      }
-
-      .dominio-final{
-        font-size:12px;
-        letter-spacing:1.4px;
-      }
-    }
-
-    .botao.principal{
+.hero-linha{
+  width:92px;
+  height:4px;
   background:var(--verde);
-  color:var(--branco);
-  border:2px solid var(--verde);
+  margin:28px auto 20px; /* ajuste fino */
+  border-radius:999px;
 }
 
-.botao.whatsapp{
-  background:transparent;
-  color:var(--cinza);
-  border:2px solid #D9DDD8;
+.hero-resposta{
+  max-width:480px; /* ↓ melhora leitura */
+  margin:0 auto;
   font-size:15px;
-  letter-spacing:0.2px;
+  line-height:1.6;
+  color:var(--cinza);
+  margin-bottom:28px;
 }
 
-.botao.whatsapp:hover{
-  color:var(--verde);
-  border-color:var(--verde);
+.hero-rodape{
+  margin-top:28px;
+  font-family:'League Spartan', sans-serif;
+  font-size:12px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:var(--cinza-claro);
+  opacity:0.75;
 }
-  </style>
-</head>
-<body>
 
-  <section class="section hero">
-    <div class="container">
-      <div class="hero-kicker">Projeto editorial de observação</div>
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
-      <h1>TERCEIRO NÍVEL</h1>
+@media (max-width:860px){
+  h1{
+    font-size:56px;
+  }
 
-      <p class="hero-subtitulo">
-       CARREGA O PIANO<br>
-        MAS NÃO TOCA A MÚSICA.
-      </p>
+  .hero-subtitulo{
+    font-size:30px;
+  }
+}
 
-      <div class="hero-linha"></div>
+/* ========================= */
+/* MOBILE (O MAIS IMPORTANTE) */
+/* ========================= */
 
-      <p class="hero-resposta">
-        Quem faz o país funcionar precisa entender como o país funciona.
-      </p>
+@media (max-width:640px){
 
-      <div class="hero-rodape">Você está na base</div>
-    </div>
-  </section>
+  .section{
+    padding:44px 18px; /* ↓ mais compacto */
+  }
 
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>O que é este projeto</h2>
-      <p>
-        O Terceiro Nível parte de uma ideia simples.<br><br>
-        Existe uma parte da sociedade que faz tudo funcionar.<br><br>
-        Essa parte trabalha, consome e paga impostos.<br><br>
-        Essa parte sustenta o país.
-      </p>
-    </div>
-  </section>
+  h1{
+    font-size:36px;
+    line-height:0.95;
+    letter-spacing:1px;
+    margin-bottom:16px; /* aproxima da frase */
+  }
 
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>Mas quase nunca vê a estrutura</h2>
-      <p>
-        Ao mesmo tempo em que sustenta tudo,<br>
-        essa base quase nunca consegue observar<br>
-        como o país funciona de fato.<br><br>
-        As decisões aparecem.<br>
-        As notícias aparecem.<br>
-        Os conflitos aparecem.<br><br>
-        Mas o funcionamento por trás disso tudo<br>
-        raramente fica claro.
-      </p>
-    </div>
-  </section>
+  .hero-subtitulo{
+    font-size:24px;
+    line-height:1.2;
+    letter-spacing:0.3px;
+    margin-bottom:22px;
+    max-width:300px; /* chave do mobile */
+  }
 
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>É aí que este espaço entra</h2>
-      <p>
-        O Terceiro Nível não existe<br>
-        para fazer barulho.<br><br>
-        Existe para observar.<br><br>
-        Observar como o país se organiza.<br>
-        Como o dinheiro circula.<br>
-        Como as decisões são tomadas.<br>
-        E quem influencia essas decisões.
-      </p>
-    </div>
-  </section>
+  .hero-linha{
+    width:60px;
+    margin:20px auto 16px;
+  }
 
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>Um outro ponto de vista</h2>
-      <p>
-        Este projeto é um ponto de observação.<br><br>
-        Um lugar para olhar o que acontece no país<br>
-        não só pelo que aparece na superfície,<br>
-        mas pela estrutura que faz aquilo acontecer.
-      </p>
-    </div>
-  </section>
+  .hero-resposta{
+    font-size:13px;
+    line-height:1.5;
+    max-width:280px;
+    margin-bottom:20px;
+  }
 
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>A questão central</h2>
-      <p>
-        Quando você começa a observar isso,<br>
-        percebe uma coisa importante:<br><br>
-        <span class="destaque">quem sustenta o sistema<br>
-        nem sempre entende o sistema.</span><br><br>
-        E, muitas vezes,<br>
-        acaba reagindo sem conseguir enxergar<br>
-        o que está por trás do que aparece.
-      </p>
-    </div>
-  </section>
-
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>Por que isso importa</h2>
-      <p>
-        Entender a estrutura<br>
-        não é um detalhe.<br><br>
-        Isso muda a forma de ver.<br>
-        Muda a forma de interpretar.<br>
-        Muda a forma de reagir.<br><br>
-        E pode mudar até a forma<br>
-        de escolher o que serve<br>
-        e o que não serve para a base.
-      </p>
-    </div>
-  </section>
-
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>Como o site funciona</h2>
-      <p>
-        Aqui não é notícia.<br><br>
-        Aqui é leitura.<br><br>
-        Leitura do que acontece no país<br>
-        a partir da estrutura<br>
-        e de como ela afeta a vida<br>
-        de quem está na base.<br><br>
-        Por isso o site é feito em blocos curtos,<br>
-        como pontos de observação.
-      </p>
-    </div>
-  </section>
-
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>E as camisetas?</h2>
-      <p>
-        As camisetas fazem parte disso.<br><br>
-        Não são só produtos.<br><br>
-        São extensões do projeto.<br><br>
-        Levam a mensagem para a rua,<br>
-        abrem conversa,<br>
-        provocam pergunta<br>
-        e convidam mais gente<br>
-        a olhar para a estrutura.
-      </p>
-    </div>
-  </section>
-
-  <section class="section secao-estreita">
-    <div class="container">
-      <h2>No fundo, é sobre isso</h2>
-      <p>
-        Quem sustenta o país<br>
-        precisa entender<br>
-        como o país funciona.<br><br>
-        O Terceiro Nível existe para isso:<br><br>
-        ajudar quem está na base<br>
-        a enxergar a estrutura<br>
-        que organiza a vida no país.
-      </p>
-    </div>
-  </section>
-
- <section class="section ultima">
-  <div class="container">
-
-    <h2>Você está na base.</h2>
-
-    <p>
-      E, quando a base entende,<br>
-      alguma coisa começa a mudar.
-    </p>
-
-    <div class="frase-final">Com você muda.</div>
-
-    <div class="botoes">
-
-      <a class="botao principal" 
-         href="https://whatsapp.com/channel/0029Vb7GLPv2ER6ZugDYMO2y" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        Receber leituras pelo WhatsApp
-      </a>
-
-    </div>
-
-  <div class="link-loja">
-  As camisetas aparecem junto das leituras no WhatsApp.
-</div>
-
-    <div class="assinatura-final">
-
-      <div class="linha-final"></div>
-
-      <div class="triangulo-final"></div>
-
-      <div class="dominio-final">
-        <a href="https://terceironivel.org" target="_blank" rel="noopener noreferrer">
-          terceironivel.org
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-</body>
-</html>
+  .hero-rodape{
+    margin-top:20px;
+    font-size:11px;
+    letter-spacing:1.5px;
+  }
+}
+</style>
