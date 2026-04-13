@@ -25,55 +25,47 @@ gtag('config', 'G-TMSS1F9VS4');
 --cinza:#666;
 }
 
-html{
-scroll-behavior:smooth;
-scroll-snap-type:y mandatory;
-}
-
 body{
 margin:0;
 font-family:Arial, sans-serif;
 background:var(--fundo);
 color:var(--texto);
-}
-
-/* estrutura geral */
-.section{
-min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
+min-height:100vh;
 text-align:center;
-padding:40px 20px;
-scroll-snap-align:start;
-max-width:900px;
-margin:auto;
+padding:20px;
 }
 
-/* tipografia */
+/* container */
+.container{
+max-width:600px;
+}
+
+/* topo */
 h1{
-font-size:42px;
-margin:0 0 10px 0;
+font-size:36px;
+margin-bottom:10px;
 letter-spacing:2px;
 }
 
 .sub{
-font-size:18px;
+font-size:16px;
 color:var(--cinza);
 margin-bottom:40px;
 }
 
+/* frase principal */
 .frase{
 font-size:26px;
 line-height:1.4;
-max-width:600px;
-margin-bottom:50px;
+margin-bottom:40px;
 }
 
-/* assinatura visual */
+/* pontos */
 .pontos{
-font-size:28px;
+font-size:26px;
 letter-spacing:10px;
 color:var(--verde);
 margin-bottom:40px;
@@ -97,10 +89,10 @@ opacity:0.85;
 
 /* rodapé */
 .rodape{
-font-size:14px;
+margin-top:50px;
+font-size:13px;
 color:var(--cinza);
-max-width:400px;
-line-height:1.6;
+line-height:1.5;
 }
 
 </style>
@@ -109,17 +101,11 @@ line-height:1.6;
 
 <body>
 
-<!-- TELA 1 -->
-<section class="section">
+<div class="container">
 
 <h1>TERCEIRO NÍVEL</h1>
 
 <div class="sub">(você está na base)</div>
-
-</section>
-
-<!-- TELA 2 -->
-<section class="section">
 
 <div class="frase">
 Quem faz o país funcionar<br>
@@ -135,27 +121,17 @@ target="_blank">
 Entrar no canal do WhatsApp
 </a>
 
-</section>
-
-<!-- TELA 3 -->
-<section class="section">
-
 <div class="rodape">
-
 <p><strong>Terceiro Nível</strong></p>
-
 <p>
-Um projeto para observar a estrutura<br>
-que organiza a vida em sociedade.
+Um projeto para observar a estrutura que organiza a vida em sociedade.
 </p>
-
 <p>
 O Brasil, a nossa casa comum.
 </p>
-
 </div>
 
-</section>
+</div>
 
 </body>
 </html>
