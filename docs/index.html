@@ -194,6 +194,22 @@
         object-fit:contain;
       }
     }
+
+    
+/* TELA 8 mais impactante */
+.section-imagem.destaque img{
+  width:110%;
+  max-height:100vh;
+  object-fit:contain;
+  margin-left:-5%;
+}
+
+@media (max-width: 600px){
+  .section-imagem.destaque img{
+    width:115%;
+    margin-left:-7.5%;
+  }
+}
   </style>
 </head>
 
@@ -264,7 +280,7 @@
 </section>
 
 <!-- TELA 8 -->
-<section class="section section-imagem">
+<section class="section section-imagem destaque">
   <div class="container">
     <img src="assets/img/fluxo-topo.png" alt="O dinheiro sobe e se concentra no topo.">
   </div>
