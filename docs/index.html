@@ -207,6 +207,50 @@
     max-height:92vh;
     object-fit:contain;
   }
+
+  .imagem-fluxo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:0;
+}
+
+.imagem-fluxo .container{
+  width:100%;
+  max-width:480px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.grafico-fluxo{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.botao-entender{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:28px;
+  padding:14px 22px;
+  border:1px solid #3A5A40;
+  border-radius:999px;
+  text-decoration:none;
+  color:#3A5A40;
+  font-size:0.98rem;
+  font-weight:600;
+  letter-spacing:0.01em;
+  background:transparent;
+  transition:all 0.2s ease;
+}
+
+.botao-entender:hover{
+  background:#3A5A40;
+  color:#F8F8F8;
+}
 </style>
 </head>
 
@@ -229,28 +273,15 @@
 </section>
 
  <!-- TELA 3 -->
-<section class="section section-imagem destaque">
+<section class="section imagem-fluxo">
   <div class="container">
-    <img src="assets/img/vai-nao-volta.png" alt="Sobe e não volta">
+    <img src="assets/vai-nao-volta.png" alt="Dinheiro público vai para o setor financeiro e não volta" class="grafico-fluxo">
+
+    <a href="https://whatsapp.com/channel/0029VbCoPo33bbV9BoaRjo2f" class="botao-entender">continuar entendendo</a>
   </div>
 </section>
   
-<!-- TELA FINAL -->
-<section class="section">
-  <div class="container">
 
-<div class="fala-grande" style="margin-bottom:40px;">
-Isso não é acaso
-</div>
-
-    <a class="botao"
-       href="https://whatsapp.com/channel/0029VbCoPo33bbV9BoaRjo2f"
-       target="_blank">
-      Continuar entendendo
-    </a>
-
-  </div>
-</section>
 
 </body>
 </html>
