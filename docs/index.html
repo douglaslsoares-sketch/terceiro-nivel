@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terceiro Nível</title>
+  <style>
+    :root{
+      --verde:#3A5A40;
+      --fundo:#F8F8F8;
+      --texto:#111111;
+      --cinza:#666666;
+      --linha:#D9D9D9;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-snap-type:y mandatory;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--fundo);
+      color:var(--texto);
+    }
+
+    .section{
+      min-height:100vh;
+      scroll-snap-align:start;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 24px;
+    }
+
+    .container{
+      width:100%;
+      max-width:720px;
+      margin:0 auto;
+    }
+
+    .hero{
+      text-align:left;
+    }
+
+    .hero h1{
+      font-size:clamp(2.8rem, 9vw, 5.4rem);
+      line-height:0.92;
+      letter-spacing:0.02em;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .hero p{
+      margin-top:22px;
+      max-width:520px;
+      font-size:1.05rem;
+      line-height:1.45;
+      color:var(--cinza);
+    }
+
+    .grafico-wrap{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:22px;
+      text-align:center;
+    }
+
+    .grafico-wrap img{
+      width:100%;
+      max-width:440px;
+      height:auto;
+      display:block;
+    }
+
+    .legenda{
+      font-size:clamp(1.4rem, 5vw, 2.3rem);
+      font-weight:800;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+    }
+
+    .contexto{
+      text-align:left;
+    }
+
+    .contexto .marca{
+      font-size:0.85rem;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:var(--cinza);
+      margin-bottom:18px;
+    }
+
+    .contexto h2{
+      font-size:clamp(1.8rem, 6vw, 3rem);
+      line-height:1.02;
+      letter-spacing:0.01em;
+      margin-bottom:26px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .contexto p{
+      font-size:1.08rem;
+      line-height:1.6;
+      color:var(--texto);
+      margin-bottom:18px;
+      max-width:620px;
+    }
+
+    .contexto p.suave{
+      color:var(--cinza);
+    }
+
+    .botao{
+      display:inline-block;
+      margin-top:18px;
+      padding:15px 22px;
+      border:1.5px solid var(--texto);
+      color:var(--texto);
+      text-decoration:none;
+      font-weight:700;
+      font-size:0.98rem;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      transition:all 0.2s ease;
+    }
+
+    .botao:hover{
+      background:var(--texto);
+      color:var(--fundo);
+    }
+
+    .rodape-minimo{
+      margin-top:28px;
+      font-size:0.85rem;
+      color:var(--cinza);
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    @media (max-width: 640px){
+      .section{
+        padding:32px 20px;
+      }
+
+      .hero p,
+      .contexto p{
+        font-size:1rem;
+        line-height:1.55;
+      }
+
+      .botao{
+        width:100%;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TELA 1 -->
+  <section class="section">
+    <div class="container hero">
+      <h1>POR QUE<br>O DINHEIRO<br>VAI<br>E NÃO VOLTA?</h1>
+      <p>
+        O país arrecada muito. Você trabalha, consome, paga impostos.
+        Mesmo assim, falta. Então o problema não é só falta de dinheiro.
+        É o caminho que esse dinheiro faz.
+      </p>
+    </div>
+  </section>
+
+  <!-- TELA 2 -->
+  <section class="section">
+    <div class="container grafico-wrap">
+      <img src="assets/img/fluxo-dinheiro.png" alt="Infográfico mostrando o dinheiro saindo da base e indo para o topo" />
+      <div class="legenda">NÃO VOLTA</div>
+    </div>
+  </section>
+
+  <!-- TELA 3 -->
+  <section class="section">
+    <div class="container contexto">
+      <div class="marca">Sobre este trabalho</div>
+      <h2>EU NÃO CHEGUEI<br>NISSO POR ACASO</h2>
+
+      <p>
+        Por muito tempo, eu achei que o principal problema do Brasil era corrupção.
+        Mas, quando comecei a olhar mais fundo, fui percebendo que havia algo maior
+        travando o país: a forma como o dinheiro público é drenado pela dívida
+        e transformado em poder para quem já está no topo.
+      </p>
+
+      <p>
+        Foi tentando entender isso — e tentando achar um jeito simples de explicar isso
+        para outras pessoas — que este trabalho nasceu.
+      </p>
+
+      <p>
+        A ideia aqui é mostrar, de forma clara, como várias coisas que parecem separadas
+        estão ligadas: a falta de investimento, os cortes sociais, a privatização
+        e a concentração de poder.
+      </p>
+
+      <p class="suave">
+        Tudo isso passa pelo dinheiro. E, muitas vezes, passa pela dívida.
+      </p>
+
+      <a class="botao" href="https://whatsapp.com/channel/0029VbCoPo33bbV9BoaRjo2f" target="_blank" rel="noopener noreferrer">
+        CONTINUAR ENTENDENDO →
+      </a>
+
+      <div class="rodape-minimo">terceironivel.org</div>
+    </div>
+  </section>
+
+</body>
+</html>
