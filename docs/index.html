@@ -16,46 +16,6 @@
 
   <style>
 
-  /* BOTÃO FINAL (corrigido) */
-.botao-final{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-
-  margin-top:40px;
-
-  padding:14px;
-
-  background:transparent;
-  border:1px solid #3A5A40;
-  color:#3A5A40;
-
-  border-radius:10px;
-  text-decoration:none;
-
-  font-size:16px;
-  font-weight:600;
-
-  max-width:320px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* Ícone */
-.botao-final svg{
-  width:20px;
-  height:20px;
-  fill:#3A5A40;
-}
-
-/* SEGURANÇA (evita bug do círculo gigante) */
-.section svg{
-  max-width:24px;
-  height:auto;
-}
-
-    
   :root{
     --verde:#3A5A40;
     --fundo:#F8F8F8;
@@ -107,73 +67,65 @@
     font-size:52px;
     font-weight:700;
     line-height:1.08;
+    margin-bottom:18px;
   }
 
   @media (max-width: 600px){
-  .fala-grande{
-    font-size:32px;
-    line-height:1.15;
+    .fala-grande{
+      font-size:32px;
+      line-height:1.15;
+    }
   }
-}
+
   .fala-media{
     font-size:34px;
     font-weight:700;
     line-height:1.2;
+    margin-bottom:16px;
   }
 
   .texto{
     font-size:30px;
     line-height:1.35;
     max-width:620px;
-    margin:0 auto;
+    margin:0 auto 12px;
   }
 
   .lista-curta{
     font-size:34px;
     line-height:1.7;
     font-weight:700;
+    margin-bottom:12px;
   }
 
-  .imagem-base{
-    max-width:100%;
+  .imagem-fluxo .container{
+    max-width:480px;
+  }
+
+  .grafico-fluxo{
+    width:100%;
+    height:auto;
+  }
+
+  .grafico-full{
+    width:100%;
+    max-width:720px;
     height:auto;
     display:block;
-    margin:0 auto;
+    margin:12px auto 0;
   }
 
-  .emblema{
-    width:78px;
-    display:block;
-    margin:22px auto 26px;
-  }
-
-  .botao{
-    display:inline-block;
-    padding:16px 30px;
-    background:var(--verde);
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
+  .microfrase{
+    margin-top:14px;
     font-size:16px;
-    transition:opacity 0.2s ease;
+    color:#777;
   }
 
-  .botao:hover{
-    opacity:0.88;
-  }
-
-  .rodape{
-    margin-top:40px;
-    font-size:13px;
-    color:var(--cinza);
-    line-height:1.6;
-  }
-
-  .seta-scroll{
-    margin-top:34px;
-    font-size:28px;
+  .transicao{
+    margin-top:24px;
+    font-size:18px;
     color:var(--verde);
-    opacity:0.8;
+    opacity:0.85;
     animation:sobe-desce 1.6s infinite;
   }
 
@@ -182,744 +134,118 @@
     50%{ transform:translateY(8px); }
   }
 
-  .section-imagem{
-    padding:0;
-    background:var(--fundo);
-  }
-
-  .section-imagem .container{
-    width:100%;
-    max-width:100%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0;
-  }
-
-  .section-imagem img{
-    width:100%;
-    max-width:100%;
-    max-height:100vh;
-    object-fit:contain;
-    display:block;
-    margin:0 auto;
-  }
-
-  .section-imagem.destaque .container{
-    width:100%;
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .section-imagem.destaque img{
-    width:100%;
-    max-width:100%;
-    max-height:92vh;
-    object-fit:contain;
-  }
-
-  .imagem-fluxo{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:0;
-  }
-
-  .imagem-fluxo .container{
-    width:100%;
-    max-width:480px;
-    margin:0 auto;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .grafico-fluxo{
-    width:100%;
-    height:auto;
-    display:block;
-  }
-
-  .microfrase{
-    margin-top:18px;
-    margin-bottom:12px;
-    font-size:16px;
-    line-height:1.4;
-    color:var(--cinza);
-  }
-
-  .botao-entender{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 22px;
-    border:1px solid #3A5A40;
-    border-radius:999px;
-    text-decoration:none;
-    color:#3A5A40;
-    font-size:0.98rem;
-    font-weight:600;
-    letter-spacing:0.01em;
-    background:transparent;
-    transition:all 0.2s ease;
-  }
-
-  .botao-entender:hover{
+  /* BOTÃO TOPO */
+  .botao-topo{
+    display:inline-block;
+    margin-top:16px;
+    padding:16px 28px;
     background:#3A5A40;
-    color:#F8F8F8;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
   }
 
-  @media (max-width: 768px){
-    .fala-pequena{
-      font-size:24px;
-    }
-
-    
-    .fala-media{
-      font-size:30px;
-    }
-
-    .texto{
-      font-size:24px;
-    }
-
-    .lista-curta{
-      font-size:28px;
-    }
-
-    .section{
-      padding:28px 18px;
-    }
+  /* BOTÃO FINAL */
+  .botao-final{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-top:40px;
+    padding:14px;
+    background:transparent;
+    border:1px solid #3A5A40;
+    color:#3A5A40;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    max-width:320px;
+    margin-left:auto;
+    margin-right:auto;
   }
 
-  @media (max-width: 600px){
-    .section-imagem img{
-      width:100%;
-      max-height:100vh;
-      object-fit:contain;
-    }
-
-    .imagem-fluxo .container{
-      max-width:420px;
-    }
-
-    .microfrase{
-      font-size:15px;
-      margin-top:16px;
-      margin-bottom:10px;
-    }
-
-    .botao-entender{
-      font-size:0.96rem;
-      padding:13px 20px;
-    }
+  .botao-final svg{
+    width:20px;
+    height:20px;
+    fill:#3A5A40;
   }
 
-
-  /* ...seu CSS atual... */
-
-  .section-final{
-    min-height:auto;
-    padding:80px 20px;
-  }
-
-  .section-final .container{
-    width:100%;
-    max-width:700px;
-    margin:0 auto;
-  }
-
-  @media (max-width: 600px){
-  .section.imagem-fluxo{
-    min-height: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-  @media (max-width: 600px){
- 
-}
-
-@media (max-width: 600px){
-  .grafico-fluxo{
-    max-height: 40vh;
-    width: auto;
-  }
-}
-
-@media (max-width: 600px){
-  .grafico-fluxo{
-    max-height:55vh;
-    width:auto;
-  }
-}
-
-.transicao{
-  margin-top:40px;
-  font-size:18px;
-  color:var(--verde);
-  opacity:0.85;
-  letter-spacing:0.02em;
-  animation:sobe-desce 1.6s infinite;
-}
-
-.grafico-full{
-  width:100%;
-  height:auto;
-  margin-top:20px;
-}
-
-@media (max-width:600px){
-  .grafico-full{
-    transform:scale(1.1);
-    transform-origin:center;
-  }
-}
-
-/* AJUSTES FINOS — ESPAÇAMENTO E GRÁFICO */
-
-.fala-grande{
-  margin-bottom:18px;
-}
-
-.fala-media{
-  margin-bottom:18px;
-}
-
-.texto{
-  margin-bottom:12px;
-}
-
-.lista-curta{
-  margin-bottom:12px;
-}
-
-.microfrase{
-  margin-top:14px;
-  color:#777;
-}
-
-.transicao{
-  margin-top:24px;
-}
-
-.tela-grafico-acd-full{
-  overflow:hidden;
-  padding-top:32px;
-  padding-bottom:32px;
-}
-
-.grafico-full{
-  width:100%;
-  max-width:720px;
-  height:auto;
-  display:block;
-  margin:12px auto 0;
-}
-
-
-
-.grafico-full{
-  width:100%;
-  max-width:720px;
-  height:auto; /* ESSENCIAL */
-  display:block;
-  margin:12px auto 0;
-}
-
-
-
-.fala-media{
-  margin-bottom:16px;
-}
-
-.grafico-full{
-  margin-top:8px;
-}
-
-
-@media (max-width:600px){
-  .grafico-full{
-    width:104%;
-    max-width:104%;
-    margin-left:-2%;
+  /* SEGURANÇA */
+  .section svg{
+    max-width:24px;
     height:auto;
   }
-}
 
-.tela-final{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:0 24px;
-  background:var(--fundo);
-}
-
-.conteudo-final{
-  max-width:420px;
-  width:100%;
-  text-align:left;
-}
-
-.frase-final{
-  font-size:32px;
-  font-weight:700;
-  line-height:1.1;
-  margin-bottom:16px;
-}
-
-.frase-continua{
-  font-size:22px;
-  color:var(--cinza);
-  line-height:1.3;
-  margin-bottom:40px;
-}
-
-/* BOTÃO */
-.botao-whatsapp{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-
-  background:#3A5A40;
-  color:#fff;
-
-  padding:16px;
-  border-radius:10px;
-
-  font-size:18px;
-  font-weight:600;
-  text-decoration:none;
-
-  width:100%;
-}
-
-/* Ícone */
-.botao-whatsapp svg{
-  width:22px;
-  height:22px;
-  fill:white;
-}
-
-.botao-topo{
-  display:inline-block;
-  margin-top:16px;
-
-  padding:16px 28px;
-  background:#3A5A40;
-  color:#fff;
-
-  border-radius:30px;
-  text-decoration:none;
-
-  font-size:16px;
-  font-weight:600;
-
-  transition:opacity 0.2s ease;
-}
-
-.botao-topo:hover{
-  opacity:0.88;
-}
-    
-</style>
- 
+  </style>
 </head>
 
 <body>
 
-<!-- TELA INICIAL (AJUSTADA) -->
+<!-- TELA INICIAL -->
 <section class="section imagem-fluxo">
   <div class="container">
 
-    <div class="fala-pequena" style="margin-bottom:10px;">
+    <div class="fala-pequena">
       Seu dinheiro não é seu.
     </div>
 
-    <div class="fala-grande" style="margin-bottom:18px;">
+    <div class="fala-grande">
       Por que o dinheiro vai<br>
       e não volta?
     </div>
 
-    <img src="assets/img/vai-nao-volta.png"
-         alt="Dinheiro público vai para o setor financeiro e não volta"
-         class="grafico-fluxo">
+    <img src="assets/img/vai-nao-volta.png" class="grafico-fluxo">
 
-  <a href="https://wa.me/5543991444266" target="_blank" class="botao-topo">
-  Continue no WhatsApp →
-</a>
-
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-
-    <div class="fala-pequena">
-  quer entender melhor antes?
-    </div>
-
-    <a href="#aprofundar"
-       class="botao-entender">
-      entender por que isso acontece
+    <a href="https://wa.me/5543991444266" target="_blank" class="botao-topo">
+      Continue no WhatsApp →
     </a>
 
   </div>
 </section>
-  
 
-<!-- TELA 1 — COMO ISSO COMEÇOU -->
-<section class="section tela-origem" id="aprofundar">
-  <div class="container">
-
-    <div class="fala-media">
-      Como isso começou
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      Tudo começou depois de uma palestra sobre a dívida pública.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      O que eu entendi ali me incomodou.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Parecia que uma parte enorme do dinheiro público ia para o sistema financeiro —
-      enquanto faltava para saúde e educação.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      A diferença era grande demais.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Eu nunca tinha ouvido falar sobre aquilo.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Era complexo.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Mesmo assim, eu comecei a estudar<br>
-      e a buscar um jeito de explicar.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Foi assim que esse projeto começou.
-    </div>
-
- <div class="transicao">
-  vem comigo ↓
-</div>
-
-  </div>
-</section>
-
-
-<!-- TELA 2 — O QUE É A DÍVIDA PÚBLICA -->
-<section class="section section-final tela-divida">
-  <div class="container">
-
-    <div class="fala-media">
-      Primeiro de tudo:<br>
-      o que é a dívida pública?
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      É quando o governo pega dinheiro emprestado<br>
-      para investir no país.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Funciona assim:
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      recebe o dinheiro<br>
-      e entrega títulos públicos.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Depois, devolve com juros.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Até aqui, nada de errado.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      O problema começa quando o dinheiro deixa de ir para investimento…
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      e passa a ser usado para pagar dívida que já venceu.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Ou seja:
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      faz dívida nova<br>
-      pra pagar dívida velha.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      A cada novo empréstimo, mais juros.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      E começa um ciclo.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      A dívida nunca termina.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Vai sendo paga… com mais dívida.
-    </div>
-
-     <div class="transicao">
-  segue ↓
-</div>
-
-  </div>
-</section>
-
-
-<!-- TELA — GRÁFICO ACD -->
-<section class="section tela-grafico-acd-full">
+<!-- GRÁFICO -->
+<section class="section">
   <div class="container">
 
     <div class="fala-media">
       Foi aqui que eu parei.
     </div>
 
-    <img src="assets/img/grafico-acd.png"
-         alt="Gráfico do orçamento federal executado em 2025"
-         class="grafico-full">
+    <img src="assets/img/grafico-acd.png" class="grafico-full">
 
-    <div class="microfrase" style="margin-top:14px;">
+    <div class="microfrase">
       Orçamento federal executado (pago) 2025 · Fonte: Auditoria Cidadã da Dívida
     </div>
 
-    <div class="transicao">
-      segue ↓
-    </div>
-
   </div>
-
-
-
-/* ícone */
-.botao-final svg{
-  width:20px;
-  height:20px;
-  fill:#3A5A40;
-}
-  
 </section>
 
-<!-- TELA — O TAMANHO DO TRILHÃO -->
-<section class="section tela-trilhao">
+<!-- FINAL -->
+<section class="section">
   <div class="container">
 
-    <div class="fala-media">
-      R$ 2,135 trilhões.
+    <div class="texto">
+      É daí que vêm as consequências.
     </div>
 
-    <div class="texto" style="margin-top:28px;">
-      É difícil até imaginar<br>
-      o tamanho disso.
-    </div>
+    <div class="texto">—</div>
 
-    <div class="texto" style="margin-top:28px;">
-      Pra ter uma ideia:
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      se você contasse<br>
-      1 número por segundo…
-    </div>
-
-    <div class="fala-media" style="margin-top:28px;">
-      levaria mais de<br>
-      67 mil anos.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      Esse é o tamanho<br>
-      do que estamos falando.
-    </div>
-
-    <div class="transicao">
-      segue ↓
-    </div>
-
-  </div>
-</section>  
-<!-- TELA 3 — O IMPACTO -->
-<section class="section section-final tela-impacto">
-  <div class="container">
-
-    <div class="texto" style="margin-top:0;">
-      Uma parte cada vez maior do dinheiro do país vai pra dívida.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      E falta pro resto:
-    </div>
-
-    <div class="lista-curta" style="margin-top:22px;">
-      saúde<br>
-      educação<br>
-      infraestrutura
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      É aí que o país trava.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      O dinheiro sai da base,<br>
-      passa pelo governo<br>
-      e vai parar no topo.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="fala-media" style="margin-top:28px;">
-      E não volta.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      Existe uma proposta de auditoria dessa dívida.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Está prevista na Constituição.
-    </div>
-
-    <div class="texto" style="margin-top:22px;">
-      Mas nunca foi feita de verdade.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="fala-media" style="margin-top:28px;">
-      Sem pressão, não acontece.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      Enquanto isso,<br>
-      o dinheiro continua sendo drenado<br>
-      e a gente continua sentindo a falta.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-     Isso acontece no dia a dia.
-    </div>
-
-    <div class="texto" style="margin-top:28px;">
-  —
-</div>
-
-<div class="texto" style="margin-top:28px;">
-  A dívida pública, por si só, não é o problema.
-</div>
-
-<div class="texto" style="margin-top:22px;">
-  O problema é como ela vem sendo usada.
-</div>
-
-<div class="texto" style="margin-top:22px;">
-  Porque, desse jeito,
-  ela acaba concentrando cada vez mais o dinheiro no topo.
-</div>
-
-<div class="texto" style="margin-top:22px;">
-  E quanto mais concentra,
-  menos sobra pra base.
-</div>
-
-<div class="texto" style="margin-top:22px;">
-  É daí que vêm as consequências.
-</div>
-
- <div class="texto" style="margin-top:28px;">
-      —
-    </div>
-
-<p class="frase-continua">
+    <p class="fala-pequena">
       A partir daqui, você vai ver isso no dia a dia.
     </p>
 
-    <!-- BOTÃO -->
- <a href="https://wa.me/5543991444266" target="_blank" class="botao-final">
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M20.52 3.48A11.82 11.82 0 0 0 12.02 0C5.4 0 .02 5.38.02 12c0 2.12.56 4.2 1.62 6.04L0 24l6.14-1.6A11.94 11.94 0 0 0 12.02 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.5-8.52z"/>
-  </svg>
-
-  Ver isso no WhatsApp →
-
-</a>
-    
-<div class="microfrase" style="margin-top:18px;">
-  ou veja tudo já publicado no canal
-</div>
-
-<a href="https://whatsapp.com/channel/0029VbCoPo33bbV9BoaRjo2f"
-   target="_blank"
-   rel="noopener"
-   style="font-size:14px; color:#666; text-decoration:none;">
-  abrir arquivo do canal →
-</a>
+    <a href="https://wa.me/5543991444266" target="_blank" class="botao-final">
+      <svg viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.82 11.82 0 0 0 12.02 0C5.4 0 .02 5.38.02 12c0 2.12.56 4.2 1.62 6.04L0 24l6.14-1.6A11.94 11.94 0 0 0 12.02 24c6.62 0 12-5.38 12-12 0-3.2-1.25-6.2-3.5-8.52z"/>
+      </svg>
+      Ver isso no WhatsApp →
+    </a>
 
   </div>
 </section>
+
+</body>
+</html>
