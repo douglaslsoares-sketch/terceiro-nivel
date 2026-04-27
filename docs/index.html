@@ -70,7 +70,7 @@
     margin-bottom:18px;
   }
 
-  @media (max-width: 600px){
+  @media (max-width:600px){
     .fala-grande{
       font-size:32px;
       line-height:1.15;
@@ -98,21 +98,12 @@
     margin-bottom:12px;
   }
 
-  .imagem-fluxo .container{
-    max-width:480px;
-  }
-
-  .grafico-fluxo{
-    width:100%;
-    height:auto;
-  }
-
+  .grafico-fluxo,
   .grafico-full{
     width:100%;
-    max-width:720px;
     height:auto;
     display:block;
-    margin:12px auto 0;
+    margin:0 auto;
   }
 
   .microfrase{
@@ -173,19 +164,13 @@
     fill:#3A5A40;
   }
 
-  /* SEGURANÇA */
-  .section svg{
-    max-width:24px;
-    height:auto;
-  }
-
   </style>
 </head>
 
 <body>
 
 <!-- TELA INICIAL -->
-<section class="section imagem-fluxo">
+<section class="section">
   <div class="container">
 
     <div class="fala-pequena">
@@ -193,8 +178,7 @@
     </div>
 
     <div class="fala-grande">
-      Por que o dinheiro vai<br>
-      e não volta?
+      Por que o dinheiro vai<br>e não volta?
     </div>
 
     <img src="assets/img/vai-nao-volta.png" class="grafico-fluxo">
@@ -220,10 +204,12 @@
       Orçamento federal executado (pago) 2025 · Fonte: Auditoria Cidadã da Dívida
     </div>
 
+    <div class="transicao">segue ↓</div>
+
   </div>
 </section>
 
-<!-- FINAL -->
+<!-- IMPACTO FINAL -->
 <section class="section">
   <div class="container">
 
@@ -233,9 +219,9 @@
 
     <div class="texto">—</div>
 
-    <p class="fala-pequena">
+    <div class="fala-pequena">
       A partir daqui, você vai ver isso no dia a dia.
-    </p>
+    </div>
 
     <a href="https://wa.me/5543991444266" target="_blank" class="botao-final">
       <svg viewBox="0 0 24 24">
