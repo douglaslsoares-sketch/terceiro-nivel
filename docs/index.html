@@ -597,6 +597,26 @@ html{
     margin-top:28px;
   }
 }
+
+.hub-conteudo{
+  display:none;
+}
+
+.hub-item.ativo .hub-conteudo{
+  display:block;
+}
+
+.tela-hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-bloco{
+  text-align:center;
+  margin:0 auto;
+}
     
 </style>
  
@@ -631,6 +651,9 @@ html{
   <button class="hub-titulo" onclick="this.parentElement.classList.toggle('ativo')">
     💰 O caminho do dinheiro
   </button>
+
+    <div class="hub-conteudo">
+      
 <!-- CAMINHO DO DINHEIRO — CONTEÚDO -->
 
 <div class="bloco bloco-dinheiro">
