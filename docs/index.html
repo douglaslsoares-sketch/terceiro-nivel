@@ -498,7 +498,105 @@ html{
   text-decoration:underline;
   opacity:0.7;
 }
+
+.hub-titulo{
+  width:100%;
+  display:block;
+
+  background:var(--verde);
+  color:#fff;
+
+  border:none;
+  border-radius:14px;
+
+  padding:22px 20px;
+  margin:0;
+
+  font-size:26px;
+  line-height:1.3;
+  font-weight:600;
+
+  text-align:left;
+
+  cursor:pointer;
+
+  min-height:72px; /* área confortável pro dedo */
+}
+
+/* remove aparência padrão de botão */
+.hub-titulo:focus{
+  outline:none;
+}
+
+/* efeito ao tocar */
+.hub-titulo:active{
+  opacity:0.85;
+}
+
+/* mobile */
+@media (max-width:600px){
+  .hub-titulo{
+    font-size:22px;
+    padding:20px 18px;
+  }
+}
     
+.hub-item{
+  margin-bottom:18px;
+}    
+
+.hero-bloco{
+  background:#111; /* cor diferente do verde */
+  color:#fff;
+
+  border-radius:16px;
+
+  padding:28px 22px;
+  margin:24px;
+
+  max-width:640px;
+}
+
+/* título */
+.hero-bloco .fala-grande{
+  font-size:42px;
+  line-height:1.15;
+  font-weight:700;
+}
+
+/* subtítulo */
+.subtitulo-hero{
+  margin-top:18px;
+  font-size:26px;
+  line-height:1.4;
+  opacity:0.9;
+}
+
+/* mobile */
+@media (max-width:600px){
+  .hero-bloco{
+    padding:24px 18px;
+    margin:18px;
+  }
+
+  .hero-bloco .fala-grande{
+    font-size:34px;
+  }
+
+  .subtitulo-hero{
+    font-size:22px;
+  }
+}
+
+.botao{
+  margin-top:36px;
+}
+
+@media (max-width:600px){
+  .botao{
+    margin-top:28px;
+  }
+}
     
 </style>
  
@@ -508,14 +606,20 @@ html{
 
 <!-- INÍCIO -->
   
-  <section class="tela tela-hero">
-  <h1 class="titulo-hero">TERCEIRO NÍVEL</h1>
+ <section class="tela tela-hero">
+  <div class="hero-bloco">
+    
+    <div class="fala-grande">
+      TERCEIRO NÍVEL
+    </div>
 
-  <p class="subtitulo-hero">
-    Pontos de observação<br>
-    pra entender como o país funciona<br>
-    de verdade.
-  </p>
+    <p class="subtitulo-hero">
+      Pontos de observação<br>
+      pra entender como o país funciona<br>
+      de verdade.
+    </p>
+
+  </div>
 </section>
   
 <!-- HUB -->
@@ -523,12 +627,10 @@ html{
  <section class="section">
   <div class="container">
 
-  <div class="hub-item" id="caminho-do-dinheiro">
-      <button class="hub-titulo" onclick="this.parentElement.classList.toggle('ativo')">
-        💰 O caminho do dinheiro
-      </button>
-     <div class="hub-conteudo">
-    
+ <div class="hub-item" id="caminho-do-dinheiro">
+  <button class="hub-titulo" onclick="this.parentElement.classList.toggle('ativo')">
+    💰 O caminho do dinheiro
+  </button>
 <!-- CAMINHO DO DINHEIRO — CONTEÚDO -->
 
 <div class="bloco bloco-dinheiro">
