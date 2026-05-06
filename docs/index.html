@@ -714,108 +714,120 @@ html{
   </div>
 </section>
 
-<!-- HUB -->
-<section class="section">
-  <div class="container">
+<div class="hub-conteudo">
 
-    <div class="hub-item ativo" id="dinheiro-nao-volta">
-      <button class="hub-titulo" onclick="this.parentElement.classList.toggle('ativo')">
-        💰 Por que o dinheiro não volta?
+  <div class="bloco bloco-dinheiro">
+
+    <div class="fala-media">
+      Por que falta dinheiro?
+    </div>
+
+    <div class="texto">
+      Porque a maior parte do dinheiro arrecadado pelo governo<br>
+      vai para pagar a dívida pública.
+    </div>
+
+    <div class="texto">
+      E o restante é insuficiente para atender<br>
+      as necessidades da população.
+    </div>
+
+  </div>
+
+  <div class="bloco bloco-neutro">
+
+    <img 
+      src="assets/img/grafico-acd.png"
+      class="grafico-full"
+      alt="Gráfico da Auditoria Cidadã da Dívida">
+
+    <div class="microfrase">
+      Fonte: Auditoria Cidadã da Dívida
+    </div>
+
+  </div>
+
+  <div class="bloco bloco-neutro">
+
+    <!-- COMENTAR -->
+    <form id="form-feedback" action="https://formspree.io/f/mykowkzj" method="POST">
+
+      <div class="fala-media">
+        Isso fez sentido pra você?
+      </div>
+
+      <div class="texto">
+        Seu comentário ajuda a melhorar os próximos temas.
+      </div>
+
+      <textarea 
+        name="comentario"
+        class="campo"
+        placeholder="escreva aqui..."></textarea>
+
+      <button type="submit" class="botao">
+        comentar →
       </button>
 
-      <div class="hub-conteudo">
+      <p id="msg-sucesso" style="display:none; margin-top:16px;">
+        enviado 👍
+      </p>
 
-        <div class="bloco bloco-base">
-          <div class="fala-media">
-            O dinheiro sai da base.
-          </div>
+    </form>
 
-          <div class="texto">
-            Você trabalha.<br>
-            Consome.<br>
-            Paga impostos.
-          </div>
+    <!-- COMPARTILHAR -->
+    <div class="texto" style="margin-top:40px;">
+      Se isso te fez pensar,<br>
+      compartilhe com alguém.
+    </div>
 
-          <div class="texto">
-            É daqui que sai o dinheiro.
-          </div>
-        </div>
+    <a 
+      href="#"
+      class="botao botao-compartilhar"
+      data-titulo="Por que falta dinheiro?"
+      data-link="#dinheiro-nao-volta">
+      compartilhar →
+    </a>
 
-        <div class="bloco bloco-neutro">
-          <div class="fala-media">
-            O dinheiro entra no governo.
-          </div>
+    <!-- CAMISETAS -->
+    <div class="texto" style="margin-top:40px;">
+      Tem gente levando essa conversa pra rua.
+    </div>
 
-          <div class="texto">
-            O governo arrecada dinheiro da população.
-          </div>
-        </div>
+    <a href="https://mont.ink/terceiro-nivel" class="botao">
+      ver camisetas →
+    </a>
 
-        <div class="bloco bloco-base">
-          <div class="fala-media">
-            Uma parte volta.
-          </div>
+    <!-- ACOMPANHAR -->
+    <form id="form-email" action="https://formspree.io/f/mykowkzj" method="POST">
 
-          <div class="lista-curta">
-            saúde<br>
-            educação<br>
-            infraestrutura
-          </div>
-        </div>
+      <div class="texto" style="margin-top:40px;">
+        Novos temas estão sendo adicionados.
+      </div>
 
-        <div class="bloco bloco-dinheiro">
-          <div class="fala-media">
-            Mas outra parte vai para a dívida pública.
-          </div>
+      <input 
+        type="email" 
+        name="email"
+        class="campo" 
+        placeholder="seu e-mail">
 
-          <div class="texto">
-            Essa é uma das partes que muita gente não vê.
-          </div>
-        </div>
+      <button type="submit" class="botao">
+        acompanhar →
+      </button>
 
-        <div class="bloco bloco-neutro">
-          <div class="fala-media">
-            O governo faz pagamentos dessa dívida.
-          </div>
+      <p id="msg-email" style="display:none; margin-top:16px;">
+        enviado 👍
+      </p>
 
-          <div class="texto">
-            Esses pagamentos incluem juros.
-          </div>
-        </div>
+    </form>
 
-        <div class="bloco bloco-estrutura">
-          <div class="fala-media">
-            Quem recebe?
-          </div>
+    <a href="#" class="link-voltar">
+      voltar ao início ↑
+    </a>
 
-          <div class="texto">
-            Quem emprestou dinheiro ao governo.
-          </div>
+  </div>
 
-          <div class="lista-curta">
-            bancos<br>
-            fundos<br>
-            grandes investidores
-          </div>
-        </div>
-
-        <div class="bloco bloco-alerta">
-          <div class="fala-media">
-            Então uma parte do dinheiro...
-          </div>
-
-          <div class="texto">
-            sai da base,<br>
-            passa pelo governo,<br>
-            e vai para o pagamento da dívida.
-          </div>
-        </div>
-
-        <div class="bloco bloco-dinheiro">
-          <div class="fala-media destaque-verde">
-            É por isso que muita gente sente que o dinheiro não volta.
-          </div>
-        </div>
+</div>
 
         <div class="bloco bloco-neutro">
 
