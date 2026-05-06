@@ -690,7 +690,7 @@ html{
 
 <body>
 
-<body>
+
 
 <!-- HERO -->
 <section class="tela tela-hero">
@@ -902,3 +902,104 @@ html{
 
   </div>
 </section>
+
+  <script>
+document.querySelectorAll('.botao-compartilhar').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    const titulo = this.dataset.titulo;
+    const link = window.location.origin + '/' + this.dataset.link;
+
+    const texto = encodeURIComponent(
+      titulo + '\n\n' + link
+    );
+
+    window.open('https://wa.me/?text=' + texto, '_blank');
+  });
+});
+</script>
+
+<script>
+function track(evento){
+  if(typeof gtag === 'function'){
+    gtag('event', evento);
+  }
+}
+
+// clique no tema
+document.querySelectorAll('.hub-titulo').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    track('abrir_tema');
+  });
+});
+
+// compartilhar
+document.querySelectorAll('.botao-compartilhar').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    track('compartilhar');
+  });
+});
+
+// camisetas
+document.querySelectorAll('a[href*="mont.ink"]').forEach(el=>{
+  el.addEventListener('click', ()=>{
+    track('camisetas');
+  });
+});
+</script>
+
+<script>
+const form = document.getElementById('form-feedback');
+const msg = document.getElementById('msg-sucesso');
+
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok){
+    form.reset();
+    msg.style.display = 'block';
+  } else {
+    alert('erro ao enviar');
+  }
+});
+</script>
+
+<script>
+const formEmail = document.getElementById('form-email');
+const msgEmail = document.getElementById('msg-email');
+
+formEmail.addEventListener('submit', async function(e){
+  e.preventDefault();
+
+  const data = new FormData(formEmail);
+
+  const response = await fetch(formEmail.action, {
+    method: formEmail.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok){
+    formEmail.reset();
+    msgEmail.style.display = 'block';
+  } else {
+    alert('erro ao enviar');
+  }
+});
+</script>
+
+</body>
+</html>
