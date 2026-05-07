@@ -493,10 +493,21 @@ html{
 
 .link-voltar{
   display:block;
+
+  width:100%;
+
   margin-top:30px;
+  padding:14px 18px;
+
+  background:none;
+  border:none;
+
   font-size:14px;
   text-decoration:underline;
+
   opacity:0.7;
+
+  cursor:pointer;
 }
 
 .hub-titulo{
@@ -757,6 +768,10 @@ html{
     margin-left:-6%;
   }
 }
+
+.bloco-impacto{
+  background:rgba(58, 90, 64, 0.06);
+}
     
 </style>
  
@@ -923,9 +938,9 @@ html{
 
           </form>
 
-          <a href="#" class="link-voltar">
-            voltar ao início ↑
-          </a>
+      <button class="link-voltar" onclick="fecharTema(this)">
+        fechar tema ↑
+      </button>
 
         </div>
 
@@ -1031,6 +1046,21 @@ formEmail.addEventListener('submit', async function(e){
     alert('erro ao enviar');
   }
 });
+</script>
+
+<script>
+function fecharTema(el){
+  const hub = el.closest('.hub-item');
+
+  if(hub){
+    hub.classList.remove('ativo');
+
+    hub.scrollIntoView({
+      behavior:'smooth',
+      block:'start'
+    });
+  }
+}
 </script>
 
 </body>
