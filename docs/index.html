@@ -545,17 +545,6 @@ html{
   margin-bottom:18px;
 }    
 
-.hero-bloco{
-  background:#111; /* cor diferente do verde */
-  color:#fff;
-
-  border-radius:16px;
-
-  padding:28px 22px;
-  margin:24px;
-
-  max-width:640px;
-}
 
 /* título */
 .hero-bloco .fala-grande{
@@ -631,13 +620,59 @@ html{
 
 .hero-bloco{
   width:100%;
-  background:#111;
-  color:#fff;
-  border-radius:16px;
-  padding:22px 20px;
   text-align:center;
+  padding:0;
+  margin:0 auto;
 }
 
+.tela-hero{
+  min-height:72vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:40px 24px 20px;
+}
+
+.emblema{
+  width:82px;
+  display:block;
+  margin:0 auto 34px;
+}
+
+.hero-bloco .fala-grande{
+  font-size:48px;
+  line-height:1.08;
+  font-weight:700;
+  color:var(--texto);
+}
+
+.hero-bloco .fala-media{
+  margin-top:16px;
+  color:var(--cinza);
+}
+
+@media (max-width:600px){
+
+  .tela-hero{
+    min-height:62vh;
+    padding:30px 22px 12px;
+  }
+
+  .hero-bloco .fala-grande{
+    font-size:34px;
+  }
+
+  .hero-bloco .fala-media{
+    font-size:24px;
+  }
+
+  .emblema{
+    width:72px;
+    margin-bottom:28px;
+  }
+}
 .campo,
 .campo-comentario,
 .input-email{
@@ -745,7 +780,7 @@ html{
       </div>
 
       <div class="fala-media">
-        Pontos de observação.
+        Observe.
       </div>
 
     </div>
@@ -828,11 +863,7 @@ html{
           <form id="form-feedback" action="https://formspree.io/f/mykowkzj" method="POST">
 
             <div class="fala-media">
-              Isso fez sentido pra você?
-            </div>
-
-            <div class="texto">
-              Seu comentário ajuda a melhorar os próximos temas.
+              Você sabia disso?
             </div>
 
             <textarea 
@@ -851,11 +882,7 @@ html{
           </form>
 
           <!-- COMPARTILHAR -->
-          <div class="texto" style="margin-top:40px;">
-            Se isso te fez pensar,<br>
-            compartilhe com alguém.
-          </div>
-
+          
           <a 
             href="#"
             class="botao botao-compartilhar"
@@ -866,7 +893,7 @@ html{
 
           <!-- CAMISETAS -->
           <div class="texto" style="margin-top:40px;">
-            Tem gente levando essa conversa pra rua.
+           Tem gente levando essa pergunta pra rua.
           </div>
 
           <a href="https://mont.ink/terceiro-nivel" class="botao">
