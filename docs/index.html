@@ -679,6 +679,49 @@ html{
   color:var(--verde);
   font-size:16px;
 }
+
+.bloco-grafico{
+  background:rgba(0,0,0,0.03);
+  padding:24px 14px;
+}
+
+.titulo-grafico{
+  font-size:18px;
+  line-height:1.35;
+  font-weight:700;
+  margin-bottom:18px;
+  color:var(--texto);
+}
+
+.bloco-grafico .grafico-full{
+  width:100%;
+  max-width:860px;
+  margin:0 auto;
+  display:block;
+}
+
+.bloco-grafico .microfrase{
+  margin-top:16px;
+  font-size:14px;
+  color:var(--cinza);
+}
+
+@media (max-width:600px){
+  .bloco-grafico{
+    padding:22px 4px;
+  }
+
+  .titulo-grafico{
+    font-size:16px;
+    margin-bottom:14px;
+  }
+
+  .bloco-grafico .grafico-full{
+    width:112%;
+    max-width:none;
+    margin-left:-6%;
+  }
+}
     
 </style>
  
@@ -740,19 +783,22 @@ html{
 
         </div>
 
-        <div class="bloco bloco-neutro">
+      <div class="bloco bloco-grafico">
 
-          <img 
-            src="assets/img/grafico-acd.png"
-            class="grafico-full"
-            alt="Gráfico da Auditoria Cidadã da Dívida">
+  <div class="titulo-grafico">
+    orçamento federal executado (pago) 2025
+  </div>
 
-          <div class="microfrase">
-            Fonte: Auditoria Cidadã da Dívida
-          </div>
+  <img 
+    src="assets/img/grafico-acd.png"
+    class="grafico-full"
+    alt="Gráfico da Auditoria Cidadã da Dívida">
 
-        </div>
+  <div class="microfrase">
+    Fonte: Auditoria Cidadã da Dívida
+  </div>
 
+</div>
         <div class="bloco bloco-neutro">
 
           <!-- COMENTAR -->
