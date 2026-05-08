@@ -777,6 +777,13 @@ html{
   min-height:auto;
   padding:20px 20px 60px;
 }
+
+.img-camiseta{
+  width:100%;
+  display:block;
+  margin-top:24px;
+  border-radius:24px;
+}
     
 </style>
  
@@ -896,28 +903,6 @@ html{
 
           </form>
 
-          <!-- COMPARTILHAR -->
-          
-          <a 
-            href="#"
-            class="botao botao-compartilhar"
-            data-titulo="Se o Brasil arrecada trilhões, por que falta dinheiro?"
-            data-link="#trilhoes-falta-dinheiro"
-            compartilhar →
-          </a>
-
-          <!-- CAMISETAS -->
-          <div class="texto" style="margin-top:40px;">
-           Tem gente levando essa pergunta pra rua.
-          </div>
-
-        <a 
-           href="https://montink.com/terceiro-nivel/trilhoes-1qjd4" 
-           class="botao"
-           target="_blank">
-           ver camiseta →
-        </a>
-
           <!-- ACOMPANHAR -->
           <form id="form-email" action="https://formspree.io/f/mykowkzj" method="POST">
 
@@ -941,7 +926,40 @@ html{
 
           </form>
 
-      <button class="link-voltar" onclick="fecharTema(this)">
+
+
+<!-- COPIAR MENSAGEM -->
+
+<div class="texto" style="margin-top:40px;">
+  Copie essa mensagem. Compartilhe depois.
+</div>
+
+<button
+  type="button"
+  class="botao botao-copiar"
+  onclick="copiarMensagem()"
+>
+  copiar mensagem
+</button>
+
+         <!-- CAMISETAS -->
+
+<div class="texto" style="margin-top:40px;">
+  Tem gente levando essa pergunta pra rua.
+</div>
+
+<a 
+  href="https://montink.com/terceiro-nivel/trilhoes-1qjd4"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img 
+    src="assets/img/camiseta-trilhoes.png"
+    alt="Camiseta Se o Brasil arrecada trilhões, por que falta dinheiro?"
+    class="img-camiseta"
+  >
+</a>
+                <button class="link-voltar" onclick="fecharTema(this)">
         fechar tema ↑
       </button>
 
@@ -953,22 +971,7 @@ html{
   </div>
 </section>
 
-<script>
-document.querySelectorAll('.botao-compartilhar').forEach(btn => {
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
 
-    const titulo = this.dataset.titulo;
-    const link = window.location.origin + '/' + this.dataset.link;
-
-    const texto = encodeURIComponent(
-      titulo + '\n\n' + link
-    );
-
-    window.open('https://wa.me/?text=' + texto, '_blank');
-  });
-});
-</script>
 
 <script>
 function track(evento){
@@ -985,14 +988,14 @@ document.querySelectorAll('.hub-titulo').forEach(el=>{
 });
 
 // compartilhar
-document.querySelectorAll('.botao-compartilhar').forEach(el=>{
+document.querySelectorAll('.botao-copiar').forEach(el=>{
   el.addEventListener('click', ()=>{
     track('compartilhar');
   });
 });
 
 // camisetas
-document.querySelectorAll('a[href*="mont.ink"]').forEach(el=>{
+document.querySelectorAll('a[href*="montink.com"], a[href*="mont.ink"]').forEach(el=>{
   el.addEventListener('click', ()=>{
     track('camisetas');
   });
@@ -1063,6 +1066,18 @@ function fecharTema(el){
       block:'start'
     });
   }
+}
+</script>
+
+  <script>
+function copiarMensagem(){
+  navigator.clipboard.writeText(
+`Se o Brasil arrecada trilhões, por que falta dinheiro?
+
+https://terceironivel.org/#trilhoes-falta-dinheiro`
+  );
+
+  alert('Mensagem copiada');
 }
 </script>
 
