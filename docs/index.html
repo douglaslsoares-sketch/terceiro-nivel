@@ -800,6 +800,22 @@ html{
   background:#3A5A40;
   color:#fff;
 }
+
+.mensagem-compartilhar{
+  margin-top:28px;
+  padding:28px 22px;
+  border:2px solid var(--verde);
+  border-radius:18px;
+  background:#fff;
+  text-align:center;
+}
+
+.link-compartilhar{
+  margin-top:22px;
+  font-size:15px;
+  opacity:0.75;
+  word-break:break-word;
+}
     
 </style>
  
@@ -967,7 +983,7 @@ html{
     <form id="form-feedback" action="https://formspree.io/f/mykowkzj" method="POST">
 
       <div class="fala-media">
-        Você sabia disso? Comente.
+        Você sabia disso?
       </div>
 
       <div class="texto" style="margin-top:18px;">
@@ -979,7 +995,7 @@ html{
       <textarea 
         name="comentario"
         class="campo"
-        placeholder="escreva aqui..."></textarea>
+        placeholder=" comente aqui..."></textarea>
 
       <button type="submit" class="botao">
         enviar comentário →
@@ -993,6 +1009,10 @@ html{
 
     <!-- ACOMPANHAR -->
     <form id="form-email" action="https://formspree.io/f/mykowkzj" method="POST">
+
+       <div class="fala-media">
+        Novos conteúdos
+      </div>
 
       <div class="texto" style="margin-top:40px;">
         Informe seu e-mail<br>
@@ -1021,6 +1041,10 @@ html{
 
     <div class="bloco-compartilhar">
 
+     <div class="fala-media">
+        Faça circular
+      </div>
+
   <p class="texto">
     Quando um assunto vital como esse
     não aparece nos noticiários,
@@ -1038,12 +1062,18 @@ html{
       Copie essa mensagem. Compartilhe depois.
     </div>
 
-    <div class="mensagem-compartilhar">
-      Se o Brasil arrecada trilhões,
-      por que falta dinheiro?
+   <div class="mensagem-compartilhar">
 
-      terceironivel.org/#trilhoes-falta-dinheiro
-    </div>
+  <div class="fala-media">
+    Se o Brasil arrecada trilhões,<br>
+    por que falta dinheiro?
+  </div>
+
+  <div class="link-compartilhar">
+    terceironivel.org/#trilhoes-falta-dinheiro
+  </div>
+
+</div>
 
     <button
       type="button"
