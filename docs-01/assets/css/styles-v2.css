@@ -1,0 +1,205 @@
+:root{
+  --verde:#3A5A40;
+  --fundo:#F8F8F8;
+  --texto:#111;
+  --cinza:#666;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--fundo);
+  color:var(--texto);
+  line-height:1.6;
+}
+
+/* ===== REGRA GLOBAL DE IMAGENS ===== */
+
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ============================= */
+/* ===== TOPO / MARCA ===== */
+/* ============================= */
+
+.topo{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  border-bottom:2px solid #000;
+}
+
+.marca{
+  display:flex;
+  align-items:center;
+}
+
+.marca a{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  color:var(--texto);
+}
+
+/* 🔥 CORREÇÃO DEFINITIVA DO LOGO */
+.marca img {
+  height: 46px;
+  width: auto;
+}
+
+
+.marca span{
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:1px;
+}
+
+.link-direita{
+  font-size:13px;
+  text-decoration:none;
+  color:var(--texto);
+}
+
+/* ============================= */
+/* ===== ÂNCORA PRINCIPAL ===== */
+/* ============================= */
+
+.ancora{
+  display:block;
+  background:#fff;
+  margin:30px 15px;
+  padding:35px 20px;
+  border-top:4px solid #000;
+  border-bottom:4px solid #000;
+  text-decoration:none;
+  color:var(--texto);
+}
+
+.ancora h1{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.ancora p{
+  font-size:18px;
+  color:var(--texto);
+}
+
+/* ============================= */
+/* ===== GRID DE CARDS ===== */
+/* ============================= */
+
+.portal{
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px 15px 120px;
+}
+
+.portal-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
+
+.portal-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100px;
+  background:#fff;
+  border:1px solid #000;
+  text-decoration:none;
+  color:var(--texto);
+  font-weight:500;
+  transition:.2s ease;
+}
+
+.portal-item:hover{
+  background:#f0f0f0;
+}
+
+@media(min-width:768px){
+  .portal-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* ============================= */
+/* ===== CONTEÚDO EDITORIAL ===== */
+/* ============================= */
+
+.content{
+  max-width:760px;
+  margin:0 auto;
+  padding:40px 20px 120px;
+}
+
+.content h1{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:15px;
+  border-bottom:3px solid #000;
+  padding-bottom:8px;
+}
+
+.content h2{
+  font-size:20px;
+  margin-top:30px;
+  margin-bottom:8px;
+}
+
+.content p{
+  color:var(--texto);
+  margin-bottom:12px;
+}
+
+/* ============================= */
+/* ===== FORMULÁRIO ===== */
+/* ============================= */
+
+form input,
+form textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:15px;
+  border:1px solid #ccc;
+}
+
+form button{
+  padding:10px 20px;
+  background:var(--verde);
+  color:#fff;
+  border:none;
+}
+
+/* ============================= */
+/* ===== FOOTER ===== */
+/* ============================= */
+
+.site-footer{
+  border-top:1px solid #e5e5e5;
+  padding:25px;
+  text-align:center;
+  font-size:14px;
+  color:var(--cinza);
+}
+
+.site-footer a{
+  text-decoration:none;
+  color:var(--cinza);
+  margin:0 15px;
+}
+
+.site-footer a:hover{
+  color:var(--verde);
+}
