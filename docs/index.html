@@ -1,0 +1,275 @@
+export default function TerceiroNivelHomepage() {
+  return (
+    <div className="min-h-screen bg-white text-zinc-900">
+      {/* HERO */}
+      <section className="px-6 pt-16 pb-14 max-w-xl mx-auto">
+        <div className="inline-block text-xs tracking-wide uppercase border border-zinc-300 rounded-full px-3 py-1 mb-6">
+          Terceiro Nível
+        </div>
+
+        <h1 className="text-4xl leading-tight font-semibold mb-6">
+          O país funciona porque existe uma base sustentando tudo.
+        </h1>
+
+        <p className="text-lg leading-relaxed text-zinc-700 mb-8">
+          O Terceiro Nível traduz temas complexos para linguagem acessível,
+          para que a população compreenda estruturas que impactam diretamente
+          sua vida.
+        </p>
+
+        <div className="flex flex-col gap-3">
+          <button className="bg-zinc-900 text-white rounded-2xl py-4 px-5 text-base font-medium">
+            Começar pela pergunta
+          </button>
+
+          <button className="border border-zinc-300 rounded-2xl py-4 px-5 text-base font-medium">
+            Entender o projeto
+          </button>
+        </div>
+      </section>
+
+      {/* MAIN QUESTION */}
+      <section className="bg-zinc-100 py-16 px-6">
+        <div className="max-w-xl mx-auto">
+          <div className="text-sm uppercase tracking-wide text-zinc-500 mb-4">
+            A pergunta que iniciou tudo
+          </div>
+
+          <h2 className="text-3xl leading-tight font-semibold mb-8">
+            Se o Brasil arrecada trilhões,
+            <br />
+            por que falta dinheiro?
+          </h2>
+
+          <div className="space-y-5 text-lg leading-relaxed text-zinc-700">
+            <p>
+              Essa pergunta abriu uma conversa que raramente acontece fora dos
+              espaços técnicos.
+            </p>
+
+            <p>
+              Ao longo de décadas, governos fizeram empréstimos, renovaram
+              dívidas e ampliaram mecanismos financeiros ligados à dívida
+              pública.
+            </p>
+
+            <p>
+              Hoje, uma parte enorme do orçamento federal está ligada a esse
+              sistema.
+            </p>
+
+            <p>
+              Mesmo assim, a maioria das pessoas nunca teve oportunidade de
+              entender esse tema de forma simples.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-3 mt-10">
+            <button className="bg-zinc-900 text-white rounded-2xl py-4 px-5 text-base font-medium">
+              Ler a narrativa completa
+            </button>
+
+            <button className="border border-zinc-300 rounded-2xl py-4 px-5 text-base font-medium">
+              Compartilhar no WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* THREE LEVELS */}
+      <section className="py-16 px-6 max-w-xl mx-auto">
+        <div className="text-sm uppercase tracking-wide text-zinc-500 mb-4">
+          O que é o Terceiro Nível?
+        </div>
+
+        <h2 className="text-3xl leading-tight font-semibold mb-10">
+          Uma forma simples de enxergar a estrutura do país.
+        </h2>
+
+        <div className="space-y-6">
+          <div className="border border-zinc-200 rounded-3xl p-6">
+            <div className="text-sm uppercase tracking-wide text-zinc-500 mb-3">
+              Primeiro nível
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-3">
+              Interesses predominantes
+            </h3>
+
+            <p className="text-zinc-700 leading-relaxed">
+              Grandes estruturas econômicas, financeiras e grupos com forte
+              influência sobre decisões importantes.
+            </p>
+          </div>
+
+          <div className="border border-zinc-200 rounded-3xl p-6">
+            <div className="text-sm uppercase tracking-wide text-zinc-500 mb-3">
+              Segundo nível
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-3">O governo</h3>
+
+            <p className="text-zinc-700 leading-relaxed">
+              O nível responsável por administrar, arrecadar, legislar e
+              executar políticas públicas.
+            </p>
+          </div>
+
+          <div className="bg-zinc-900 text-white rounded-3xl p-6">
+            <div className="text-sm uppercase tracking-wide text-zinc-400 mb-3">
+              Terceiro nível
+            </div>
+
+            <h3 className="text-2xl font-semibold mb-3">
+              A base que sustenta tudo
+            </h3>
+
+            <p className="leading-relaxed text-zinc-200">
+              Trabalhadores, pequenos produtores, profissionais, famílias e a
+              população comum que mantém o país funcionando diariamente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* THEMES */}
+      <section className="bg-zinc-100 py-16 px-6">
+        <div className="max-w-xl mx-auto">
+          <div className="text-sm uppercase tracking-wide text-zinc-500 mb-4">
+            Temas do Terceiro Nível
+          </div>
+
+          <h2 className="text-3xl leading-tight font-semibold mb-10">
+            Assuntos que deveriam ser simples de entender.
+          </h2>
+
+          <div className="space-y-4">
+            {[
+              'O que é dívida pública?',
+              'Para onde vão os impostos?',
+              'Como os juros afetam sua vida?',
+              'Por que a inflação reduz poder de compra?',
+              'Como funciona o sistema financeiro?',
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-white border border-zinc-200 rounded-2xl p-5"
+              >
+                <p className="text-lg font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEEDBACK */}
+      <section className="py-16 px-6 max-w-xl mx-auto">
+        <div className="text-sm uppercase tracking-wide text-zinc-500 mb-4">
+          Conversa aberta
+        </div>
+
+        <h2 className="text-3xl leading-tight font-semibold mb-6">
+          Queremos ouvir as pessoas.
+        </h2>
+
+        <div className="space-y-5 text-lg leading-relaxed text-zinc-700 mb-10">
+          <p>
+            Dúvidas. Críticas. Discordâncias. Sugestões. Novas perguntas.
+          </p>
+
+          <p>
+            O objetivo do projeto não é encerrar o debate. É fazer essa
+            conversa existir.
+          </p>
+        </div>
+
+        <button className="w-full bg-zinc-900 text-white rounded-2xl py-4 px-5 text-base font-medium">
+          Enviar feedback no WhatsApp
+        </button>
+      </section>
+
+      {/* SHIRT */}
+      <section className="bg-zinc-900 text-white py-16 px-6">
+        <div className="max-w-xl mx-auto">
+          <div className="text-sm uppercase tracking-wide text-zinc-400 mb-4">
+            Uma pergunta circulando pelas ruas
+          </div>
+
+          <div className="border border-zinc-700 rounded-[32px] p-8 mb-8 text-center">
+            <p className="text-3xl leading-tight font-semibold">
+              Se o Brasil arrecada trilhões,
+              <br />
+              por que falta dinheiro?
+            </p>
+          </div>
+
+          <div className="space-y-5 text-lg leading-relaxed text-zinc-300 mb-10">
+            <p>
+              A camiseta não entrega respostas prontas.
+            </p>
+
+            <p>
+              Ela provoca conversa, desperta curiosidade e leva a pergunta para
+              espaços onde esse debate raramente chega.
+            </p>
+          </div>
+
+          <button className="w-full bg-white text-zinc-900 rounded-2xl py-4 px-5 text-base font-medium">
+            Conhecer a camiseta
+          </button>
+        </div>
+      </section>
+
+      {/* SHARE */}
+      <section className="py-16 px-6 max-w-xl mx-auto">
+        <div className="text-sm uppercase tracking-wide text-zinc-500 mb-4">
+          Faça circular
+        </div>
+
+        <h2 className="text-3xl leading-tight font-semibold mb-6">
+          Temas importantes também precisam circular de pessoa para pessoa.
+        </h2>
+
+        <div className="space-y-5 text-lg leading-relaxed text-zinc-700 mb-10">
+          <p>
+            Quando um assunto não aparece nos debates nem nos noticiários, ele
+            ainda assim pode ganhar força através das conversas.
+          </p>
+
+          <p>
+            Foi por isso que escolhemos o compartilhamento orgânico como parte
+            central do projeto.
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <button className="bg-zinc-900 text-white rounded-2xl py-4 px-5 text-base font-medium">
+            Compartilhar no WhatsApp
+          </button>
+
+          <button className="border border-zinc-300 rounded-2xl py-4 px-5 text-base font-medium">
+            Copiar mensagem
+          </button>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-zinc-200 py-10 px-6">
+        <div className="max-w-xl mx-auto">
+          <h3 className="text-2xl font-semibold mb-4">Terceiro Nível</h3>
+
+          <p className="text-zinc-600 leading-relaxed mb-8">
+            Traduzindo temas complexos para linguagem acessível.
+          </p>
+
+          <div className="flex flex-col gap-3 text-zinc-500">
+            <span>Início</span>
+            <span>O Projeto</span>
+            <span>Temas</span>
+            <span>Participar</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
